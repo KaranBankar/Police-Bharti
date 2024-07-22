@@ -33,9 +33,16 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    buildFeatures{
+        viewBinding=true
+    }
 }
 
 dependencies {
+
+    //SDP dependecy for device compatable UI
+    implementation("com.intuit.sdp:sdp-android:1.1.1")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
