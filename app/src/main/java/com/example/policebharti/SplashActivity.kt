@@ -2,6 +2,7 @@ package com.example.policebharti
 
 import android.content.Intent
 import android.Manifest
+import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.Handler
@@ -40,4 +41,5 @@ class SplashActivity : AppCompatActivity() {
             finish()
         },2000)
     }
+
 }

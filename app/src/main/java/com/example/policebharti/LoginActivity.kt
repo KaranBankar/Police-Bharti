@@ -2,6 +2,7 @@ package com.example.policebharti
 
 import android.Manifest
 import android.content.Intent
+import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.widget.Button
@@ -32,6 +33,13 @@ class LoginActivity : AppCompatActivity() {
             insets
         }
 
+        loadData()
+        if(loadData()==true){
+            var intent=Intent(this,HomeActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.SEND_SMS), 1)
         }
@@ -40,5 +48,28 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.loginBtn.setOnClickListener{
+            saveData()
+            var intent=Intent(this,HomeActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+    }
+    
+    fun saveData(){
+        var preferences:SharedPreferences=getSharedPreferences("sharedPref", MODE_PRIVATE)
+        var editor=preferences.edit()
+        
+        editor.apply()
+        {
+            putBoolean("key",true)
+        }.apply()
+    }
+
+    fun loadData():Boolean{
+        var preferences:SharedPreferences=getSharedPreferences("sharedPref", MODE_PRIVATE)
+        var myKey=preferences.getBoolean("key",false)
+        return myKey
     }
 }
