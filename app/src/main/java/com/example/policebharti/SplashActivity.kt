@@ -30,9 +30,7 @@ class SplashActivity : AppCompatActivity() {
             insets
         }
 
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.SEND_SMS), 1)
-        }
+
 
         val handler=Handler(Looper.getMainLooper())
 
