@@ -19,6 +19,12 @@
         android:theme="@style/Theme.PoliceBharti"
         tools:targetApi="31">
         <activity
+            android:name=".YearSelectforDistrictwiseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DistrictSelectActivity"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity

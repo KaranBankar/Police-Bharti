@@ -1,38 +1,25 @@
 package com.example.policebharti
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
-import androidx.core.view.ViewCompat.ScrollIndicators
 import androidx.core.view.WindowInsetsCompat
 import com.example.policebharti.databinding.ActivityHomeBinding
+import com.example.policebharti.databinding.ActivityYearSelectforDistrictwiseBinding
 
-class HomeActivity : AppCompatActivity() {
+class YearSelectforDistrictwiseActivity : AppCompatActivity() {
 
-    lateinit var binding:ActivityHomeBinding
+    lateinit var binding: ActivityYearSelectforDistrictwiseBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        binding=ActivityHomeBinding.inflate(layoutInflater)
+        binding=ActivityYearSelectforDistrictwiseBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
-        }
-
-        binding.selctDistrictCard.setOnClickListener{
-            var intent= Intent(this,DistrictSelectActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-
-        binding.districtwisecard.setOnClickListener{
-            var intent=Intent(this,YearSelectforDistrictwiseActivity::class.java)
-            startActivity(intent)
-            finish()
         }
     }
 }
