@@ -7,15 +7,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.policebharti.databinding.ActivityHomeBinding
-import com.example.policebharti.databinding.ActivityYearSelectforDistrictwiseBinding
+import com.example.policebharti.databinding.ActivityShowAllDistrictQuestionBinding
 
-class YearSelectforDistrictwiseActivity : AppCompatActivity() {
+class Show_All_District_questionActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityYearSelectforDistrictwiseBinding
+    lateinit var binding: ActivityShowAllDistrictQuestionBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        binding=ActivityYearSelectforDistrictwiseBinding.inflate(layoutInflater)
+        binding=ActivityShowAllDistrictQuestionBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -23,8 +23,8 @@ class YearSelectforDistrictwiseActivity : AppCompatActivity() {
             insets
         }
 
-        binding.card2019.setOnClickListener{
-            var i= Intent(this,Show_All_District_questionActivity::class.java)
+        binding.marathiCard.setOnClickListener{
+            var i= Intent(this,Question_Screen_Activity::class.java)
             startActivity(i)
             finish()
         }
