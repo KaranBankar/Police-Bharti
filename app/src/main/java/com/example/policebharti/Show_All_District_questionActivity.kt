@@ -24,7 +24,7 @@ class Show_All_District_questionActivity : AppCompatActivity() {
         }
 
         binding.marathiCard.setOnClickListener{
-            var i= Intent(this,Question_Screen_Activity::class.java)
+            val i= Intent(this,Question_Screen_Activity::class.java)
             startActivity(i)
             finish()
         }

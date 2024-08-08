@@ -2,16 +2,21 @@ package com.example.policebharti
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.ViewCompat.ScrollIndicators
 import androidx.core.view.WindowInsetsCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import com.example.policebharti.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
 
     lateinit var binding:ActivityHomeBinding
+
+    lateinit var toggle:ActionBarDrawerToggle
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -23,6 +28,15 @@ class HomeActivity : AppCompatActivity() {
             insets
         }
 
+        toggle=ActionBarDrawerToggle(this,binding.drawerLayout,binding.toolbar,R.string.open,R.string.close)
+        binding.drawerLayout.addDrawerListener(toggle)
+
+        toggle.syncState()
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+//        binding.navView.setNavigationItemSelectedListener {
+//
+//        }
         binding.selctDistrictCard.setOnClickListener{
             var intent= Intent(this,DistrictSelectActivity::class.java)
             startActivity(intent)
@@ -34,5 +48,10 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return true
     }
 }
