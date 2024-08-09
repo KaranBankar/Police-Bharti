@@ -44,6 +44,12 @@ dependencies {
     //SDP dependecy for device compatable UI
     implementation("com.intuit.sdp:sdp-android:1.1.1")
 
+    //Circular Image Dependecy
+    implementation("de.hdodenhof:circleimageview:3.1.0")
+
+    //Material Cardview dependecy
+    implementation("com.google.android.material:material:1.6.1")
+    
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

@@ -1,30 +1,21 @@
 package com.example.policebharti
 
 import android.content.Intent
-import android.Manifest
-import android.content.SharedPreferences
-import android.content.pm.PackageManager
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import androidx.activity.enableEdgeToEdge
-import androidx.annotation.MainThread
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.policebharti.databinding.ActivitySplashBinding
+import com.example.policebharti.databinding.ActivityHomeBinding
+import com.example.policebharti.databinding.ActivityShowAllDistrictQuestionBinding
 
-import kotlinx.coroutines.MainScope
+class Show_All_District_questionActivity : AppCompatActivity() {
 
-class SplashActivity : AppCompatActivity() {
-
-    lateinit var binding: ActivitySplashBinding
+    lateinit var binding: ActivityShowAllDistrictQuestionBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        binding=ActivitySplashBinding.inflate(layoutInflater)
+        binding=ActivityShowAllDistrictQuestionBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -32,15 +23,10 @@ class SplashActivity : AppCompatActivity() {
             insets
         }
 
-
-
-        val handler=Handler(Looper.getMainLooper())
-
-        handler.postDelayed({
-            var intent=Intent(this,LoginActivity::class.java)
-            startActivity(intent)
+        binding.marathiCard.setOnClickListener{
+            val i= Intent(this,Question_Screen_Activity::class.java)
+            startActivity(i)
             finish()
-        },2000)
+        }
     }
-
 }
