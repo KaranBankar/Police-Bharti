@@ -26,6 +26,7 @@ import  android.Manifest
 import android.net.Uri
 import android.widget.Toast
 
+
 class SignupActivity : AppCompatActivity() {
      lateinit var tv_login:TextView
      lateinit var et_mobile:EditText
@@ -84,6 +85,8 @@ class SignupActivity : AppCompatActivity() {
                 if (ContextCompat.checkSelfPermission(this, Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED) {
                     ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.SEND_SMS), 1)
                 } else {
+                    val smsSender:SmsSenderClass=SmsSenderClass()
+                    smsSender.sendmassage(et_mobile.text.toString(),"3434")
                     sendSMS(et_mobile.text.toString(), "2020")
                 }
                   tv_send_otp.visibility=View.VISIBLE
@@ -103,5 +106,18 @@ class SignupActivity : AppCompatActivity() {
             Toast.makeText(this, "SMS failed to send: ${e.message}", Toast.LENGTH_SHORT).show()
         }
     }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        when (requestCode) {
+            1 -> {
+                if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
+                    sendSMS("9322067937", "Hello, this is a test message!")
+                } else {
+                    Toast.makeText(this, "Permission denied to send SMS", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+        }
 
 }
