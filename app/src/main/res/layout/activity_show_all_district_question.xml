@@ -69,6 +69,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="बुद्धिमत्ता चाचणी"
+                android:textColor="@color/black"
                 android:textSize="@dimen/_16sdp" />
         </com.google.android.material.card.MaterialCardView>
 
@@ -84,6 +85,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:textColor="@color/black"
                 android:text="गणित"
                 android:textSize="@dimen/_16sdp" />
         </com.google.android.material.card.MaterialCardView>
@@ -108,6 +110,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="मराठी"
+                android:textColor="@color/black"
                 android:textSize="@dimen/_16sdp" />
         </com.google.android.material.card.MaterialCardView>
 
@@ -124,6 +127,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="चालू घडामोडी"
+                android:textColor="@color/black"
                 android:textSize="@dimen/_16sdp" />
         </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
@@ -146,6 +150,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="भूमिती"
+                android:textColor="@color/black"
                 android:textSize="@dimen/_16sdp" />
         </com.google.android.material.card.MaterialCardView>
 
@@ -162,6 +167,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="English"
+                android:textColor="@color/black"
                 android:textSize="@dimen/_16sdp" />
         </com.google.android.material.card.MaterialCardView>
     </LinearLayout>

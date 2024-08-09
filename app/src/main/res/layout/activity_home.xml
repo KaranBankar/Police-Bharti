@@ -17,15 +17,7 @@
         tools:openDrawer="start"
         android:orientation="vertical">
 
-        <com.google.android.material.navigation.NavigationView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/nav_view"
-            app:menu="@menu/nav_menu"
-            app:headerLayout="@layout/nav_header"
-            app:itemIconTint="@null"
-            android:layout_gravity="start"
-            android:fitsSystemWindows="true"/>
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -104,7 +96,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_150sdp"
+                android:layout_height="@dimen/_160sdp"
                 android:layout_margin="@dimen/_20sdp"
                 android:backgroundTint="@color/secondary"
                 app:cardCornerRadius="@dimen/_15sdp">
@@ -180,8 +172,9 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
                             android:layout_marginLeft="@dimen/_12sdp"
-                            android:layout_marginBottom="@dimen/_6sdp"
+                            android:layout_marginBottom="@dimen/_4sdp"
                             android:text="District wise Ques "
+                            android:textColor="@color/black"
                             android:textSize="@dimen/_12sdp"
                             android:textStyle="bold" />
                     </com.google.android.material.card.MaterialCardView>
@@ -232,7 +225,8 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
                             android:layout_marginLeft="@dimen/_35sdp"
-                            android:layout_marginBottom="@dimen/_6sdp"
+                            android:layout_marginBottom="@dimen/_4sdp"
+                            android:textColor="@color/black"
                             android:text="Syllabus"
                             android:textSize="@dimen/_12sdp"
                             android:textStyle="bold" />
@@ -290,7 +284,8 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
                             android:layout_marginLeft="@dimen/_12sdp"
-                            android:layout_marginBottom="@dimen/_6sdp"
+                            android:layout_marginBottom="@dimen/_4sdp"
+                            android:textColor="@color/black"
                             android:text="Subject Wise MCQ's"
                             android:textSize="@dimen/_12sdp"
                             android:textStyle="bold" />
@@ -341,7 +336,8 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
                             android:layout_marginLeft="@dimen/_18sdp"
-                            android:layout_marginBottom="@dimen/_6sdp"
+                            android:layout_marginBottom="@dimen/_4sdp"
+                            android:textColor="@color/black"
                             android:text="Question Papers"
                             android:textSize="@dimen/_12sdp"
                             android:textStyle="bold" />
@@ -398,6 +394,7 @@
                             android:layout_marginLeft="@dimen/_50sdp"
                             android:layout_marginBottom="@dimen/_6sdp"
                             android:text="Test"
+                            android:textColor="@color/black"
                             android:textSize="@dimen/_12sdp"
                             android:textStyle="bold" />
                     </com.google.android.material.card.MaterialCardView>
@@ -447,8 +444,9 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
                             android:layout_marginLeft="@dimen/_14sdp"
-                            android:layout_marginBottom="@dimen/_6sdp"
+                            android:layout_marginBottom="@dimen/_4sdp"
                             android:text="Saved Importants"
+                            android:textColor="@color/black"
                             android:textSize="@dimen/_12sdp"
                             android:textStyle="bold" />
                     </com.google.android.material.card.MaterialCardView>
@@ -461,6 +459,7 @@
                 android:layout_height="wrap_content"
                 android:text="Join us on"
                 android:textSize="@dimen/_15sdp"
+                android:textColor="@color/black"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_10sdp"/>
 

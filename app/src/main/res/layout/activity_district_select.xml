@@ -48,8 +48,9 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
                     android:layout_height="@dimen/_40sdp"
+                    app:strokeWidth="@dimen/_1sdp"
                     android:backgroundTint="@color/white"
                     app:strokeColor="@color/primary">
 
@@ -58,20 +59,23 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="अकोला"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp" />
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
                     android:layout_height="@dimen/_40sdp"
                     android:layout_marginLeft="@dimen/_15sdp"
                     android:backgroundTint="@color/white"
+                    app:strokeWidth="@dimen/_1sdp"
                     app:strokeColor="@color/primary">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:textColor="@color/black"
                         android:text="अमरावती"
                         android:textSize="@dimen/_15sdp" />
                 </com.google.android.material.card.MaterialCardView>
@@ -87,8 +91,9 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
                     android:layout_height="@dimen/_40sdp"
+                    app:strokeWidth="@dimen/_1sdp"
                     android:backgroundTint="@color/white"
                     app:strokeColor="@color/primary">
 
@@ -97,15 +102,17 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="बुलढाणा"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp" />
 
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
                     android:layout_height="@dimen/_40sdp"
                     android:backgroundTint="@color/white"
                     android:layout_marginLeft="@dimen/_15sdp"
+                    app:strokeWidth="@dimen/_1sdp"
                     app:strokeColor="@color/primary">
 
                     <TextView
@@ -113,6 +120,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="यवतमाळ"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp" />
 
                 </com.google.android.material.card.MaterialCardView>
@@ -127,8 +135,9 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
                     android:layout_height="@dimen/_40sdp"
+                    app:strokeWidth="@dimen/_1sdp"
                     android:backgroundTint="@color/white"
                     app:strokeColor="@color/primary">
 
@@ -137,15 +146,17 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="वाशीम"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp" />
 
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
                     android:layout_height="@dimen/_40sdp"
                     android:backgroundTint="@color/white"
                     android:layout_marginLeft="@dimen/_15sdp"
+                    app:strokeWidth="@dimen/_1sdp"
                     app:strokeColor="@color/primary">
 
                     <TextView
@@ -153,6 +164,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="छत्रपती संभाजीनगर"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp" />
 
                 </com.google.android.material.card.MaterialCardView>
@@ -167,7 +179,8 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
+                    app:strokeWidth="@dimen/_1sdp"
                     android:layout_height="@dimen/_40sdp"
                     android:backgroundTint="@color/white"
                     app:strokeColor="@color/primary">
@@ -177,15 +190,17 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="जालना"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp" />
 
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
                     android:layout_height="@dimen/_40sdp"
                     android:backgroundTint="@color/white"
                     android:layout_marginLeft="@dimen/_15sdp"
+                    app:strokeWidth="@dimen/_1sdp"
                     app:strokeColor="@color/primary">
 
                     <TextView
@@ -193,6 +208,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="धाराशिव"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp" />
 
                 </com.google.android.material.card.MaterialCardView>
@@ -208,8 +224,9 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
                     android:layout_height="@dimen/_40sdp"
+                    app:strokeWidth="@dimen/_1sdp"
                     android:backgroundTint="@color/white"
                     app:strokeColor="@color/primary">
 
@@ -218,14 +235,16 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="लातुर"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp" />
 
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
                     android:layout_height="@dimen/_40sdp"
                     android:backgroundTint="@color/white"
+                    app:strokeWidth="@dimen/_1sdp"
                     android:layout_marginLeft="@dimen/_15sdp"
                     app:strokeColor="@color/primary">
 
@@ -234,6 +253,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="नांदेड"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp" />
 
                 </com.google.android.material.card.MaterialCardView>
@@ -249,8 +269,9 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
                     android:layout_height="@dimen/_40sdp"
+                    app:strokeWidth="@dimen/_1sdp"
                     android:backgroundTint="@color/white"
                     app:strokeColor="@color/primary">
 
@@ -259,13 +280,15 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="हिंगोली"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp" />
 
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
                     android:layout_height="@dimen/_40sdp"
+                    app:strokeWidth="@dimen/_1sdp"
                     android:backgroundTint="@color/white"
                     android:layout_marginLeft="@dimen/_15sdp"
                     app:strokeColor="@color/primary">
@@ -275,6 +298,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="परभणी"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp" />
 
                 </com.google.android.material.card.MaterialCardView>
@@ -290,7 +314,8 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
+                    app:strokeWidth="@dimen/_1sdp"
                     android:layout_height="@dimen/_40sdp"
                     android:backgroundTint="@color/white"
                     app:strokeColor="@color/primary">
@@ -300,13 +325,15 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="मुंबई शहर"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp" />
 
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
                     android:layout_height="@dimen/_40sdp"
+                    app:strokeWidth="@dimen/_1sdp"
                     android:backgroundTint="@color/white"
                     android:layout_marginLeft="@dimen/_15sdp"
                     app:strokeColor="@color/primary">
@@ -316,6 +343,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="मुंबई उपनगर"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp" />
 
                 </com.google.android.material.card.MaterialCardView>
@@ -330,8 +358,9 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
                     android:layout_height="@dimen/_40sdp"
+                    app:strokeWidth="@dimen/_1sdp"
                     android:backgroundTint="@color/white"
                     app:strokeColor="@color/primary">
 
@@ -340,13 +369,15 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="पालघर"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp" />
 
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
                     android:layout_height="@dimen/_40sdp"
+                    app:strokeWidth="@dimen/_1sdp"
                     android:backgroundTint="@color/white"
                     android:layout_marginLeft="@dimen/_15sdp"
                     app:strokeColor="@color/primary">
@@ -356,6 +387,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="रायगड"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp" />
 
                 </com.google.android.material.card.MaterialCardView>
@@ -370,9 +402,10 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
                     android:layout_height="@dimen/_40sdp"
                     android:backgroundTint="@color/white"
+                    app:strokeWidth="@dimen/_1sdp"
                     app:strokeColor="@color/primary">
 
                     <TextView
@@ -380,12 +413,14 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="रत्नागिरी"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp" />
 
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
+                    app:strokeWidth="@dimen/_1sdp"
                     android:layout_height="@dimen/_40sdp"
                     android:backgroundTint="@color/white"
                     android:layout_marginLeft="@dimen/_15sdp"
@@ -396,6 +431,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="सिंधुदुर्ग"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp" />
 
                 </com.google.android.material.card.MaterialCardView>
@@ -410,8 +446,9 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
                     android:layout_height="@dimen/_40sdp"
+                    app:strokeWidth="@dimen/_1sdp"
                     android:backgroundTint="@color/white"
                     app:strokeColor="@color/primary">
 
@@ -420,14 +457,16 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="बुलढाणा"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp" />
 
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
                     android:layout_height="@dimen/_40sdp"
                     android:backgroundTint="@color/white"
+                    app:strokeWidth="@dimen/_1sdp"
                     android:layout_marginLeft="@dimen/_15sdp"
                     app:strokeColor="@color/primary">
 
@@ -436,6 +475,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="नागपूर"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp" />
 
                 </com.google.android.material.card.MaterialCardView>
@@ -449,8 +489,9 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
                     android:layout_height="@dimen/_40sdp"
+                    app:strokeWidth="@dimen/_1sdp"
                     android:backgroundTint="@color/white"
                     app:strokeColor="@color/primary">
 
@@ -459,13 +500,15 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="वर्धा"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp" />
 
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
                     android:layout_height="@dimen/_40sdp"
+                    app:strokeWidth="@dimen/_1sdp"
                     android:backgroundTint="@color/white"
                     android:layout_marginLeft="@dimen/_15sdp"
                     app:strokeColor="@color/primary">
@@ -475,6 +518,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="भंडारा"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp" />
 
                 </com.google.android.material.card.MaterialCardView>
@@ -489,8 +533,9 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
                     android:layout_height="@dimen/_40sdp"
+                    app:strokeWidth="@dimen/_1sdp"
                     android:backgroundTint="@color/white"
                     app:strokeColor="@color/primary">
 
@@ -499,13 +544,15 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="गोंदिया"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp" />
 
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
                     android:layout_height="@dimen/_40sdp"
+                    app:strokeWidth="@dimen/_1sdp"
                     android:backgroundTint="@color/white"
                     android:layout_marginLeft="@dimen/_15sdp"
                     app:strokeColor="@color/primary">
@@ -515,6 +562,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="चंद्रपूर"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp" />
 
                 </com.google.android.material.card.MaterialCardView>
@@ -529,8 +577,9 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
                     android:layout_height="@dimen/_40sdp"
+                    app:strokeWidth="@dimen/_1sdp"
                     android:backgroundTint="@color/white"
                     app:strokeColor="@color/primary">
 
@@ -539,14 +588,16 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="गडचिरोली"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp" />
 
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
                     android:layout_height="@dimen/_40sdp"
                     android:backgroundTint="@color/white"
+                    app:strokeWidth="@dimen/_1sdp"
                     android:layout_marginLeft="@dimen/_15sdp"
                     app:strokeColor="@color/primary">
 
@@ -555,6 +606,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="नाशिक"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp" />
 
                 </com.google.android.material.card.MaterialCardView>
@@ -569,8 +621,9 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
                     android:layout_height="@dimen/_40sdp"
+                    app:strokeWidth="@dimen/_1sdp"
                     android:backgroundTint="@color/white"
                     app:strokeColor="@color/primary">
 
@@ -579,13 +632,15 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="धुळे"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp" />
 
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
                     android:layout_height="@dimen/_40sdp"
+                    app:strokeWidth="@dimen/_1sdp"
                     android:backgroundTint="@color/white"
                     android:layout_marginLeft="@dimen/_15sdp"
                     app:strokeColor="@color/primary">
@@ -595,10 +650,13 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="नंदुरबार"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp" />
 
                 </com.google.android.material.card.MaterialCardView>
-            </LinearLayout>\\<LinearLayout
+            </LinearLayout>
+
+            <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/_20sdp"
@@ -607,8 +665,9 @@
             android:orientation="horizontal">
 
             <com.google.android.material.card.MaterialCardView
-                android:layout_width="@dimen/_130sdp"
+                android:layout_width="@dimen/_125sdp"
                 android:layout_height="@dimen/_40sdp"
+                app:strokeWidth="@dimen/_1sdp"
                 android:backgroundTint="@color/white"
                 app:strokeColor="@color/primary">
 
@@ -617,13 +676,15 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="जळगाव"
+                    android:textColor="@color/black"
                     android:textSize="@dimen/_15sdp" />
 
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:layout_width="@dimen/_130sdp"
+                android:layout_width="@dimen/_125sdp"
                 android:layout_height="@dimen/_40sdp"
+                app:strokeWidth="@dimen/_1sdp"
                 android:backgroundTint="@color/white"
                 android:layout_marginLeft="@dimen/_15sdp"
                 app:strokeColor="@color/primary">
@@ -633,10 +694,13 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="अहमदनगर"
+                    android:textColor="@color/black"
                     android:textSize="@dimen/_15sdp" />
 
             </com.google.android.material.card.MaterialCardView>
-        </LinearLayout>\\<LinearLayout
+        </LinearLayout>
+
+            <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/_20sdp"
@@ -645,8 +709,9 @@
             android:orientation="horizontal">
 
             <com.google.android.material.card.MaterialCardView
-                android:layout_width="@dimen/_130sdp"
+                android:layout_width="@dimen/_125sdp"
                 android:layout_height="@dimen/_40sdp"
+                app:strokeWidth="@dimen/_1sdp"
                 android:backgroundTint="@color/white"
                 app:strokeColor="@color/primary">
 
@@ -655,13 +720,15 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="बीड"
+                    android:textColor="@color/black"
                     android:textSize="@dimen/_15sdp" />
 
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:layout_width="@dimen/_130sdp"
+                android:layout_width="@dimen/_125sdp"
                 android:layout_height="@dimen/_40sdp"
+                app:strokeWidth="@dimen/_1sdp"
                 android:backgroundTint="@color/white"
                 android:layout_marginLeft="@dimen/_15sdp"
                 app:strokeColor="@color/primary">
@@ -671,6 +738,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="सातारा"
+                    android:textColor="@color/black"
                     android:textSize="@dimen/_15sdp" />
 
             </com.google.android.material.card.MaterialCardView>
@@ -685,8 +753,9 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
                     android:layout_height="@dimen/_40sdp"
+                    app:strokeWidth="@dimen/_1sdp"
                     android:backgroundTint="@color/white"
                     app:strokeColor="@color/primary">
 
@@ -695,13 +764,15 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="सांगली"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp" />
 
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
                     android:layout_height="@dimen/_40sdp"
+                    app:strokeWidth="@dimen/_1sdp"
                     android:backgroundTint="@color/white"
                     android:layout_marginLeft="@dimen/_15sdp"
                     app:strokeColor="@color/primary">
@@ -711,6 +782,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="सोलापूर"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp" />
 
                 </com.google.android.material.card.MaterialCardView>
@@ -725,8 +797,9 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
                     android:layout_height="@dimen/_40sdp"
+                    app:strokeWidth="@dimen/_1sdp"
                     android:backgroundTint="@color/white"
                     app:strokeColor="@color/primary">
 
@@ -735,12 +808,14 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="कोल्हापूर"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp" />
 
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
+                    app:strokeWidth="@dimen/_1sdp"
                     android:layout_height="@dimen/_40sdp"
                     android:backgroundTint="@color/white"
                     android:layout_marginLeft="@dimen/_15sdp"
@@ -751,6 +826,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="ठाणे"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp" />
 
                 </com.google.android.material.card.MaterialCardView>
@@ -765,7 +841,8 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
+                    android:layout_width="@dimen/_125sdp"
+                    app:strokeWidth="@dimen/_1sdp"
                     android:layout_height="@dimen/_40sdp"
                     android:backgroundTint="@color/white"
                     app:strokeColor="@color/primary">
@@ -775,6 +852,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="पुणे"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp" />
 
                 </com.google.android.material.card.MaterialCardView>

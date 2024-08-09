@@ -49,6 +49,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="10/200"
+                android:textColor="@color/black"
                 android:layout_gravity="center"
                 android:textSize="@dimen/_17sdp"/>
         </androidx.cardview.widget.CardView>
@@ -73,6 +74,7 @@
             android:text="प्रश्न : 'साक्षीने प्रश्न विचारला' या विधानातील कर्म ओळखा"
             android:textSize="@dimen/_17sdp"
             android:textStyle="bold"
+            android:textColor="@color/black"
             android:layout_margin="@dimen/_10sdp"
             android:layout_gravity="center"/>
     </LinearLayout>
@@ -88,6 +90,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1. साक्षीने"
+            android:textColor="@color/black"
             android:textSize="@dimen/_17sdp"
             android:layout_margin="@dimen/_10sdp"
             android:layout_gravity="center"/>
@@ -103,6 +106,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="2. विचारला"
+            android:textColor="@color/black"
             android:textSize="@dimen/_17sdp"
             android:layout_margin="@dimen/_10sdp"
             android:layout_gravity="center"/>
@@ -118,6 +122,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="3. प्रश्न"
+            android:textColor="@color/black"
             android:textSize="@dimen/_17sdp"
             android:layout_margin="@dimen/_10sdp"
             android:layout_gravity="center"/>
@@ -134,6 +139,7 @@
         android:layout_height="wrap_content"
         android:text="4. नेे"
         android:textSize="@dimen/_17sdp"
+        android:textColor="@color/black"
         android:layout_margin="@dimen/_10sdp"
         android:layout_gravity="center"/>
 </LinearLayout>
@@ -159,4 +165,14 @@
             android:layout_marginLeft="@dimen/_150sdp"/>
 
     </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        app:menu="@menu/nav_menu"
+        app:headerLayout="@layout/nav_header"
+        app:itemIconTint="@null"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"/>
 </LinearLayout>
