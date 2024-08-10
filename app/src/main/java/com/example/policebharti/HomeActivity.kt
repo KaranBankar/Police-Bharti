@@ -1,8 +1,11 @@
 package com.example.policebharti
 
+import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.Window
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
@@ -34,19 +37,47 @@ class HomeActivity : AppCompatActivity() {
         toggle.syncState()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-//        binding.navView.setNavigationItemSelectedListener {
-//
-//        }
+        binding.navView.setNavigationItemSelectedListener {
+
+            if(it.itemId==R.id.nav_home){
+                var intent=Intent(this,HomeActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+            else if(it.itemId==R.id.nav_profile){
+                Toast.makeText(this,"Profile clicked",Toast.LENGTH_SHORT).show()
+            }
+            else if(it.itemId==R.id.nav_settings){
+                Toast.makeText(this,"Settings clicked",Toast.LENGTH_SHORT).show()
+            }
+            else if(it.itemId==R.id.nav_aboutus){
+//                var dialog=Dialog(this)
+//                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+//                dialog.setTitle("About US")
+//                dialog.setContentView()
+//                dialog.create()
+            }
+            true
+        }
+
         binding.selctDistrictCard.setOnClickListener{
             var intent= Intent(this,DistrictSelectActivity::class.java)
             startActivity(intent)
-            finish()
         }
 
         binding.districtwisecard.setOnClickListener{
             var intent=Intent(this,YearSelectforDistrictwiseActivity::class.java)
             startActivity(intent)
-            finish()
+        }
+
+        binding.syllabusCard.setOnClickListener{
+            var i=Intent(this,Syllabus_PDF_Activity::class.java)
+            startActivity(i)
+        }
+
+        binding.questionpapercard.setOnClickListener{
+            var i=Intent(this,Question_Papre_PDF_Activity::class.java)
+            startActivity(i)
         }
 
 

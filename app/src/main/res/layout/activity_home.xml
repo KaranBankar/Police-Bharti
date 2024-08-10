@@ -17,6 +17,16 @@
         tools:openDrawer="start"
         android:orientation="vertical">
 
+        <com.google.android.material.navigation.NavigationView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/nav_view"
+            app:menu="@menu/nav_menu"
+            app:headerLayout="@layout/nav_header"
+            app:itemIconTint="@null"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"/>
+
 
 
         <LinearLayout
@@ -195,6 +205,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/_3sdp"
+                        android:id="@+id/syllabus_card"
                         android:backgroundTint="@color/white"
                         app:strokeWidth="@dimen/_1sdp"
                         android:theme="@style/CardView"
@@ -307,6 +318,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/_3sdp"
+                        android:id="@+id/questionpapercard"
                         android:backgroundTint="@color/white"
                         app:strokeWidth="@dimen/_1sdp"
                         app:strokeColor="@color/primary">

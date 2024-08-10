@@ -19,6 +19,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.policebharti.databinding.ActivityLoginBinding
 import com.example.policebharti.databinding.ActivitySplashBinding
 
+
 class LoginActivity : AppCompatActivity() {
 
     lateinit var binding :ActivityLoginBinding
