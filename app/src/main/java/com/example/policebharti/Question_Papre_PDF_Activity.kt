@@ -1,20 +1,32 @@
 package com.example.policebharti
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.policebharti.databinding.ActivityHomeBinding
+import com.example.policebharti.databinding.ActivityQuestionPaprePdfBinding
 
 class Question_Papre_PDF_Activity : AppCompatActivity() {
+
+    lateinit var binding: ActivityQuestionPaprePdfBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_question_papre_pdf)
+        binding=ActivityQuestionPaprePdfBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        binding.back.setOnClickListener{
+            var i= Intent(this,HomeActivity::class.java)
+            startActivity(i)
+            finish()
         }
     }
 }

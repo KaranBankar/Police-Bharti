@@ -28,5 +28,11 @@ class Show_All_District_questionActivity : AppCompatActivity() {
             startActivity(i)
             finish()
         }
+
+        binding.back.setOnClickListener{
+            var i=Intent(this,YearSelectforDistrictwiseActivity::class.java)
+            startActivity(i)
+            finish()
+        }
     }
 }

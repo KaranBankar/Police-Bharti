@@ -28,5 +28,11 @@ class YearSelectforDistrictwiseActivity : AppCompatActivity() {
             startActivity(i)
             finish()
         }
+
+        binding.back.setOnClickListener{
+            var i=Intent(this,HomeActivity::class.java)
+            startActivity(i)
+            finish()
+        }
     }
 }
