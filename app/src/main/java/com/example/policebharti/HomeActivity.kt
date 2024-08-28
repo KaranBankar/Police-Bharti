@@ -80,6 +80,11 @@ class HomeActivity : AppCompatActivity() {
             startActivity(i)
         }
 
+        binding.testcard.setOnClickListener{
+            var i=Intent(this,ChooseTestActivity::class.java)
+            startActivity(i)
+        }
+
 
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

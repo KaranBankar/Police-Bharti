@@ -1,10 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/secondary"
+    android:orientation="vertical"
     tools:context=".ChooseTestActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:src="@drawable/back"
+        android:id="@+id/back"
+        android:layout_margin="@dimen/_10sdp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Test"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20sdp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="@dimen/_125sdp"
+            android:layout_height="@dimen/_50sdp"
+            app:strokeWidth="@dimen/_1sdp"
+            android:backgroundTint="@color/white"
+            app:strokeColor="@color/primary">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:text="Test 1"
+                android:textSize="@dimen/_20sdp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="@dimen/_125sdp"
+            android:layout_height="@dimen/_50sdp"
+            app:strokeWidth="@dimen/_1sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:backgroundTint="@color/white"
+            app:strokeColor="@color/primary">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:text="Test 2"
+                android:textSize="@dimen/_20sdp" />
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20sdp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="@dimen/_125sdp"
+            android:layout_height="@dimen/_50sdp"
+            app:strokeWidth="@dimen/_1sdp"
+            android:backgroundTint="@color/white"
+            app:strokeColor="@color/primary">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:text="Test 3"
+                android:textSize="@dimen/_20sdp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="@dimen/_125sdp"
+            android:layout_height="@dimen/_50sdp"
+            app:strokeWidth="@dimen/_1sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:backgroundTint="@color/white"
+            app:strokeColor="@color/primary">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:text="Test 4"
+                android:textSize="@dimen/_20sdp" />
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20sdp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="@dimen/_125sdp"
+            android:layout_height="@dimen/_50sdp"
+            app:strokeWidth="@dimen/_1sdp"
+            android:backgroundTint="@color/white"
+            app:strokeColor="@color/primary">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:text="Test 5"
+                android:textSize="@dimen/_20sdp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="@dimen/_125sdp"
+            android:layout_height="@dimen/_50sdp"
+            app:strokeWidth="@dimen/_1sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:backgroundTint="@color/white"
+            app:strokeColor="@color/primary">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:text="Test 6"
+                android:textSize="@dimen/_20sdp" />
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+
+</LinearLayout>

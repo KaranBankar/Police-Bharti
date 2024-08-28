@@ -19,6 +19,9 @@
         android:theme="@style/Theme.PoliceBharti"
         tools:targetApi="31">
         <activity
+            android:name=".ChooseTestActivity"
+            android:exported="false" />
+        <activity
             android:name=".Question_Papre_PDF_Activity"
             android:exported="false" />
         <activity

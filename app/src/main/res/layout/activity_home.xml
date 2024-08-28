@@ -375,6 +375,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/_3sdp"
+                        android:id="@+id/testcard"
                         app:strokeWidth="@dimen/_1sdp"
                         android:backgroundTint="@color/white"
                         app:strokeColor="@color/primary">
