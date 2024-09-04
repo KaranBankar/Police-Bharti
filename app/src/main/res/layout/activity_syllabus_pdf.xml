@@ -51,6 +51,7 @@
         android:layout_width="@dimen/_160sdp"
         android:layout_height="@dimen/_30sdp"
         app:cardCornerRadius="@dimen/_10sdp"
+        android:id="@+id/syllabus_download"
         android:layout_gravity="center"
         android:backgroundTint="#33F63B"
         android:layout_marginTop="@dimen/_15sdp">
