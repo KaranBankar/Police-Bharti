@@ -1,5 +1,6 @@
 package com.example.policebharti
 
+import android.content.ActivityNotFoundException
 import android.content.ContentValues
 import android.content.Intent
 import android.os.Build
@@ -64,11 +65,28 @@ class Syllabus_PDF_Activity : AppCompatActivity() {
                     }
                 }
                 Toast.makeText(this, "PDF downloaded to Downloads", Toast.LENGTH_SHORT).show()
+
+                //Open PDF USing Intent
+                // Close the input stream
+                inputStream.close()
+
+                // Open the PDF after download
+                val openPdfIntent = Intent(Intent.ACTION_VIEW).apply {
+                    setDataAndType(it, "application/pdf")
+                    addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                }
+
+                try {
+                    startActivity(openPdfIntent)
+                } catch (e: ActivityNotFoundException) {
+                    Toast.makeText(this, "No app found to open PDF", Toast.LENGTH_SHORT).show()
+                }
+
             } ?: run {
                 Toast.makeText(this, "Failed to download PDF", Toast.LENGTH_SHORT).show()
             }
 
-            inputStream.close()
             Toast.makeText(this,"Syllabus Download",Toast.LENGTH_SHORT).show();
         }
     }
