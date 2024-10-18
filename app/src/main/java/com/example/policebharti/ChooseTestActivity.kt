@@ -51,5 +51,17 @@ class ChooseTestActivity : AppCompatActivity() {
             startActivity(i)
             finish()
         }
+
+        binding.test5.setOnClickListener{
+            var i=Intent(this,TestFiveActivity::class.java)
+            startActivity(i)
+            finish()
+        }
+
+        binding.test6.setOnClickListener{
+            var i=Intent(this,TestSixActivity::class.java)
+            startActivity(i)
+            finish()
+        }
     }
 }

@@ -119,6 +119,7 @@
             android:layout_width="@dimen/_125sdp"
             android:layout_height="@dimen/_50sdp"
             app:strokeWidth="@dimen/_1sdp"
+            android:id="@+id/test5"
             android:backgroundTint="@color/white"
             app:strokeColor="@color/primary">
 
@@ -135,6 +136,7 @@
             android:layout_width="@dimen/_125sdp"
             android:layout_height="@dimen/_50sdp"
             app:strokeWidth="@dimen/_1sdp"
+            android:id="@+id/test6"
             android:layout_marginLeft="@dimen/_15sdp"
             android:backgroundTint="@color/white"
             app:strokeColor="@color/primary">
