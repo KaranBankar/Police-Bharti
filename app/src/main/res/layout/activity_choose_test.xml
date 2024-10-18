@@ -78,6 +78,7 @@
             android:layout_height="@dimen/_50sdp"
             app:strokeWidth="@dimen/_1sdp"
             android:backgroundTint="@color/white"
+            android:id="@+id/test3"
             app:strokeColor="@color/primary">
 
             <TextView
@@ -94,6 +95,7 @@
             android:layout_height="@dimen/_50sdp"
             app:strokeWidth="@dimen/_1sdp"
             android:layout_marginLeft="@dimen/_15sdp"
+            android:id="@+id/test4"
             android:backgroundTint="@color/white"
             app:strokeColor="@color/primary">
 
