@@ -33,5 +33,11 @@ class ChooseTestActivity : AppCompatActivity() {
             startActivity(i)
             finish()
         }
+
+        binding.test2.setOnClickListener{
+            var i=Intent(this,TestTwoActivity::class.java)
+            startActivity(i)
+            finish()
+        }
     }
 }

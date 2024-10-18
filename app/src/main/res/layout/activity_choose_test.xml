@@ -53,6 +53,7 @@
             android:layout_height="@dimen/_50sdp"
             app:strokeWidth="@dimen/_1sdp"
             android:layout_marginLeft="@dimen/_15sdp"
+            android:id="@+id/test2"
             android:backgroundTint="@color/white"
             app:strokeColor="@color/primary">
 

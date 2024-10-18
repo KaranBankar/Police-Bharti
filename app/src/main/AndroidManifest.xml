@@ -21,6 +21,9 @@
         android:theme="@style/Theme.PoliceBharti"
         tools:targetApi="31" >
         <activity
+            android:name=".TestTwoActivity"
+            android:exported="false" />
+        <activity
             android:name=".TestOneActivity"
             android:exported="false" />
         <activity
