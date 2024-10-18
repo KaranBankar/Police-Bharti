@@ -81,18 +81,7 @@ class SignupActivity : AppCompatActivity() {
 
         btn_send_otp.setOnClickListener {
             pb_send_otp.visibility=View.VISIBLE
-            Handler().postDelayed(Runnable {
-                if (ContextCompat.checkSelfPermission(this, Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED) {
-                    ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.SEND_SMS), 1)
-                } else {
-                    val smsSender:SmsSenderClass=SmsSenderClass()
-                    smsSender.sendmassage(et_mobile.text.toString(),"3434")
-                    sendSMS(et_mobile.text.toString(), "2020")
-                }
-                  tv_send_otp.visibility=View.VISIBLE
-                pb_send_otp.visibility=View.INVISIBLE
-
-            },2000)
+            et_mobile.text.toString();
         }
 
     }

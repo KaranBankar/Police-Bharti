@@ -36,7 +36,8 @@
             android:layout_height="@dimen/_50sdp"
             app:strokeWidth="@dimen/_1sdp"
             android:backgroundTint="@color/white"
-            app:strokeColor="@color/primary">
+            app:strokeColor="@color/primary"
+            android:id="@+id/test1">
 
             <TextView
                 android:layout_width="wrap_content"

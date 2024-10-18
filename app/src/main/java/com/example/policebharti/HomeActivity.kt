@@ -66,6 +66,7 @@ class HomeActivity : AppCompatActivity() {
         binding.selctDistrictCard.setOnClickListener{
             var intent= Intent(this,DistrictSelectActivity::class.java)
             startActivity(intent)
+
         }
 
         binding.districtwisecard.setOnClickListener{
@@ -76,16 +77,19 @@ class HomeActivity : AppCompatActivity() {
         binding.syllabusCard.setOnClickListener{
             var i=Intent(this,Syllabus_PDF_Activity::class.java)
             startActivity(i)
+            finish()
         }
 
         binding.questionpapercard.setOnClickListener{
             var i=Intent(this,Question_Papre_PDF_Activity::class.java)
             startActivity(i)
+            finish()
         }
 
         binding.testcard.setOnClickListener{
             var i=Intent(this,ChooseTestActivity::class.java)
             startActivity(i)
+            finish()
         }
 
 

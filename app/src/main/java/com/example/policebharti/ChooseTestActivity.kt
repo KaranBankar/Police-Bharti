@@ -27,5 +27,11 @@ class ChooseTestActivity : AppCompatActivity() {
             startActivity(i)
             finish()
         }
+
+        binding.test1.setOnClickListener{
+            var i=Intent(this,TestOneActivity::class.java)
+            startActivity(i)
+            finish()
+        }
     }
 }
