@@ -104,7 +104,7 @@
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:id="@+id/mobile"
                         android:background="@color/transprant"
-                        android:hint="Enter Mobile"
+                        android:hint="Enter Username"
                         android:inputType="number"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
