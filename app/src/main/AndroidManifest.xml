@@ -21,6 +21,18 @@
         android:theme="@style/Theme.PoliceBharti"
         tools:targetApi="31">
         <activity
+            android:name=".MarthiQuestionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GanitActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BuddhimattaQuestionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SubjectWiseQuestionActivity"
+            android:exported="false" />
+        <activity
             android:name=".TestSixActivity"
             android:exported="false" />
         <activity

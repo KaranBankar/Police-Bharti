@@ -69,6 +69,12 @@ class HomeActivity : AppCompatActivity() {
 
         }
 
+        binding.SubjectWiseQuestion.setOnClickListener{
+            var intent=Intent(this,SubjectWiseQuestionActivity::class.java)
+            startActivity(intent)
+        }
+
+
         binding.districtwisecard.setOnClickListener{
             var intent=Intent(this,YearSelectforDistrictwiseActivity::class.java)
             startActivity(intent)
