@@ -21,6 +21,9 @@
         android:theme="@style/Theme.PoliceBharti"
         tools:targetApi="31">
         <activity
+            android:name=".Chalu_Ghada_Modi_Activity"
+            android:exported="false" />
+        <activity
             android:name=".MarthiQuestionsActivity"
             android:exported="false" />
         <activity
