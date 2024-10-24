@@ -41,5 +41,29 @@ class SubjectWiseQuestionActivity : AppCompatActivity() {
             startActivity(i)
             finish()
         }
+
+        binding.chaluGhadamodiCard.setOnClickListener{
+            var i=Intent(this,Chalu_Ghada_Modi_Activity::class.java)
+            startActivity(i)
+            finish()
+        }
+
+        binding.bhumatiCard.setOnClickListener{
+            var i=Intent(this,BhumetiActivity::class.java)
+            startActivity(i)
+            finish()
+        }
+
+        binding.englishCard.setOnClickListener{
+            var i=Intent(this,EnglishSubjectActivity::class.java)
+            startActivity(i)
+            finish()
+        }
+
+        binding.back.setOnClickListener {
+            var i=Intent(this,HomeActivity::class.java)
+            startActivity(i)
+            finish()
+        }
     }
 }

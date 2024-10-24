@@ -152,13 +152,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/_3sdp"
-                        android:id="@+id/districtwisecard"
-                        android:backgroundTint="@color/white"
+                        android:id="@+id/Subject_wise_Question"
                         app:strokeWidth="@dimen/_1sdp"
+                        android:backgroundTint="@color/white"
                         app:strokeColor="@color/primary">
 
                         <LinearLayout
-                            android:layout_width="@dimen/_130sdp"
+                            android:layout_width="163dp"
                             android:layout_height="182dp"
                             android:orientation="vertical">
 
@@ -171,11 +171,11 @@
                         </LinearLayout>
 
                         <ImageView
-                            android:layout_width="123dp"
-                            android:layout_height="88dp"
-                            android:layout_marginLeft="@dimen/_20sdp"
-                            android:layout_marginTop="30dp"
-                            android:src="@drawable/districwisequestion" />
+                            android:layout_width="120dp"
+                            android:layout_height="80dp"
+                            android:layout_marginLeft="@dimen/_30sdp"
+                            android:layout_marginTop="@dimen/_27sdp"
+                            android:src="@drawable/subjectwise" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -183,12 +183,16 @@
                             android:layout_gravity="bottom"
                             android:layout_marginLeft="@dimen/_12sdp"
                             android:layout_marginBottom="@dimen/_4sdp"
-                            android:text="District wise Ques "
                             android:textColor="@color/black"
+                            android:text="Subject Wise MCQ's"
                             android:textSize="@dimen/_12sdp"
                             android:textStyle="bold" />
                     </com.google.android.material.card.MaterialCardView>
                 </com.google.android.material.card.MaterialCardView>
+
+
+
+
 
 
 
@@ -266,7 +270,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/_3sdp"
-                        android:id="@+id/Subject_wise_Question"
+                        android:id="@+id/testcard"
                         app:strokeWidth="@dimen/_1sdp"
                         android:backgroundTint="@color/white"
                         app:strokeColor="@color/primary">
@@ -286,19 +290,19 @@
 
                         <ImageView
                             android:layout_width="120dp"
-                            android:layout_height="80dp"
-                            android:layout_marginLeft="@dimen/_30sdp"
-                            android:layout_marginTop="@dimen/_27sdp"
-                            android:src="@drawable/subjectwise" />
+                            android:layout_height="86dp"
+                            android:layout_marginLeft="@dimen/_25sdp"
+                            android:layout_marginTop="30dp"
+                            android:src="@drawable/test" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
-                            android:layout_marginLeft="@dimen/_12sdp"
-                            android:layout_marginBottom="@dimen/_4sdp"
+                            android:layout_marginLeft="@dimen/_50sdp"
+                            android:layout_marginBottom="@dimen/_6sdp"
+                            android:text="Test"
                             android:textColor="@color/black"
-                            android:text="Subject Wise MCQ's"
                             android:textSize="@dimen/_12sdp"
                             android:textStyle="bold" />
                     </com.google.android.material.card.MaterialCardView>
@@ -359,114 +363,7 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_120sdp"
-                android:layout_marginTop="@dimen/_10sdp">
 
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/_20sdp"
-                    app:strokeWidth="@dimen/_1sdp"
-                    android:backgroundTint="@color/white"
-                    app:strokeColor="@color/primary">
-
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_3sdp"
-                        android:id="@+id/testcard"
-                        app:strokeWidth="@dimen/_1sdp"
-                        android:backgroundTint="@color/white"
-                        app:strokeColor="@color/primary">
-
-                        <LinearLayout
-                            android:layout_width="163dp"
-                            android:layout_height="182dp"
-                            android:orientation="vertical">
-
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="@dimen/_70sdp"
-                                android:layout_height="@dimen/_60sdp"
-                                android:layout_margin="@dimen/_8sdp"
-                                android:backgroundTint="@color/secondary"
-                                app:cardCornerRadius="@dimen/_10sdp"/>
-                        </LinearLayout>
-
-                        <ImageView
-                            android:layout_width="120dp"
-                            android:layout_height="86dp"
-                            android:layout_marginLeft="@dimen/_25sdp"
-                            android:layout_marginTop="30dp"
-                            android:src="@drawable/test" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="bottom"
-                            android:layout_marginLeft="@dimen/_50sdp"
-                            android:layout_marginBottom="@dimen/_6sdp"
-                            android:text="Test"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/_12sdp"
-                            android:textStyle="bold" />
-                    </com.google.android.material.card.MaterialCardView>
-                </com.google.android.material.card.MaterialCardView>
-
-
-
-
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="@dimen/_130sdp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/_20sdp"
-                    app:strokeWidth="@dimen/_1sdp"
-                    android:backgroundTint="@color/white"
-                    app:strokeColor="@color/primary">
-
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_3sdp"
-                        app:strokeWidth="@dimen/_1sdp"
-                        android:backgroundTint="@color/white"
-                        app:strokeColor="@color/primary">
-
-                        <LinearLayout
-                            android:layout_width="163dp"
-                            android:layout_height="182dp"
-                            android:orientation="vertical">
-
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="@dimen/_70sdp"
-                                android:layout_height="@dimen/_60sdp"
-                                android:layout_margin="@dimen/_8sdp"
-                                android:backgroundTint="@color/secondary"
-                                app:cardCornerRadius="@dimen/_10sdp" />
-                        </LinearLayout>
-
-                        <ImageView
-                            android:layout_width="120dp"
-                            android:layout_height="86dp"
-                            android:layout_marginLeft="@dimen/_25sdp"
-                            android:layout_marginTop="30dp"
-                            android:src="@drawable/importants" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="bottom"
-                            android:layout_marginLeft="@dimen/_14sdp"
-                            android:layout_marginBottom="@dimen/_4sdp"
-                            android:text="Saved Importants"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/_12sdp"
-                            android:textStyle="bold" />
-                    </com.google.android.material.card.MaterialCardView>
-                </com.google.android.material.card.MaterialCardView>
-
-            </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"

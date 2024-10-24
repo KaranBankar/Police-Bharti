@@ -30,7 +30,7 @@ class Show_All_District_questionActivity : AppCompatActivity() {
         }
 
         binding.back.setOnClickListener{
-            var i=Intent(this,YearSelectforDistrictwiseActivity::class.java)
+            var i=Intent(this,HomeActivity::class.java)
             startActivity(i)
             finish()
         }

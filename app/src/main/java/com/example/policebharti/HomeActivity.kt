@@ -75,11 +75,6 @@ class HomeActivity : AppCompatActivity() {
         }
 
 
-        binding.districtwisecard.setOnClickListener{
-            var intent=Intent(this,YearSelectforDistrictwiseActivity::class.java)
-            startActivity(intent)
-        }
-
         binding.syllabusCard.setOnClickListener{
             var i=Intent(this,Syllabus_PDF_Activity::class.java)
             startActivity(i)
