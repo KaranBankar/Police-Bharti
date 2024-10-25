@@ -21,12 +21,6 @@
         android:theme="@style/Theme.PoliceBharti"
         tools:targetApi="31">
         <activity
-            android:name=".EnglishSubjectActivity"
-            android:exported="false" />
-        <activity
-            android:name=".BhumetiActivity"
-            android:exported="false" />
-        <activity
             android:name=".Chalu_Ghada_Modi_Activity"
             android:exported="false" />
         <activity
@@ -68,27 +62,13 @@
         <activity
             android:name=".Syllabus_PDF_Activity"
             android:exported="false" />
-        <activity
-            android:name=".Question_Screen_Activity"
-            android:exported="false" />
-        <activity
-            android:name=".Show_All_District_questionActivity"
-            android:exported="false" />
-        <activity
-            android:name=".YearSelectforDistrictwiseActivity"
-            android:exported="false" />
-        <activity
-            android:name=".DistrictSelectActivity"
-            android:exported="false" />
+
         <activity
             android:name=".HomeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".SignupActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LoginActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:enableOnBackInvokedCallback="true"/>
+
+
         <activity
             android:name=".SplashActivity"
             android:exported="true">

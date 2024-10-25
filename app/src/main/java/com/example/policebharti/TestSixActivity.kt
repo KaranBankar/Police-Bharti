@@ -9,6 +9,7 @@ import android.widget.RadioGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -74,8 +75,7 @@ class TestSixActivity : AppCompatActivity() {
                 tv.text = "${currentQuestionIndex + 1}"
             } else {
                 // End of quiz
-                Toast.makeText(this, "Quiz finished! Your score is $score/${questionList.size}", Toast.LENGTH_SHORT).show()
-                resetQuiz()
+                showScoreDialog(score)
             }
         } else {
             Toast.makeText(this, "Please select an option", Toast.LENGTH_SHORT).show()
@@ -138,27 +138,42 @@ class TestSixActivity : AppCompatActivity() {
             Question(14, "प्रश्न १४: 'सर्व मराठी लोकांना सांस्कृतिक धरोहर आहे' ह्या विधानातील अटी कोणत्या?", listOf("A) सांस्कृतिक", "B) आर्थिक", "C) सामाजिक", "D) सर्वात महत्त्वाचे"), 1),
             Question(15, "प्रश्न १५: 'शाळेतील सर्व विद्यार्थ्यांना परीक्षा देण्याची आवश्यकता आहे' ह्या विधानाचे उलट विधान काय आहे?", listOf("A) काही विद्यार्थ्यांना परीक्षा देण्याची आवश्यकता नाही", "B) सर्व विद्यार्थ्यांना परीक्षा द्यावी लागेल", "C) काही विद्यार्थ्यांना परीक्षा द्यावी लागेल", "D) सर्व विद्यार्थ्यांना परीक्षा देणे आवश्यक आहे"), 0),
 
-            // Bhumati (Geography) Questions
-            Question(16, "प्रश्न १६: 'संयुक्त राष्ट्रांचे मुख्यालय कोणत्या शहरात आहे?'", listOf("A) पॅरिस", "B) न्यूयॉर्क", "C) जिनिव्हा", "D) लंडन"), 1),
-            Question(17, "प्रश्न १७: 'भारतातील भौगोलिक क्षेत्रफळ सर्वात मोठा राज्य कोणता आहे?'", listOf("A) उत्तर प्रदेश", "B) राजस्थान", "C) मध्य प्रदेश", "D) महाराष्ट्र"), 1),
-            Question(18, "प्रश्न १८: 'हिमालय पर्वताच्या शिखरांपैकी कोणते शिखर सर्वात उंच आहे?'", listOf("A) कंचनजंगा", "B) नांगापरबात", "C) माउंट एव्हरेस्ट", "D) धवलागिरी"), 2),
-            Question(19, "प्रश्न १९: 'वातावरणातील CO2 वायूची वाढ कोणत्या घटकामुळे होते?' ", listOf("A) वृक्षांची कत्तल", "B) औद्योगिकीकरण", "C) वाहतूक", "D) सर्व"), 0),
-            Question(20, "प्रश्न २०: 'पृथ्वीच्या ध्रुवीय क्षेत्राचे तापमान' काय दर्शवते?", listOf("A) उष्णकटिबंधीय", "B) तापमान गती", "C) हिवाळा", "D) समशीतोष्ण"), 1),
+            Question(16, "प्रश्न 16: 'दिवसाचे चोविस तास' या कवितेत मुख्यतः कोणत्या विषयावर चर्चा केली आहे?", listOf("A) निसर्ग", "B) मानव जीवन", "C) काळाची महत्ता", "D) समाजातील समस्या"), 2),
+            Question(17, "प्रश्न 17: 'पायाची गोष्ट' या कथेचा लेखक कोण आहे?", listOf("A) द. मा. मिरासदार", "B) शं. ना. नवरे", "C) व. पु. काळे", "D) पु. ल. देशपांडे"), 0),
+            Question(18, "प्रश्न 18: 'महात्मा गांधी' यांच्या जीवनावर आधारित कोणता ग्रंथ प्रसिद्ध आहे?", listOf("A) 'गांधी: द लास्ट स्टेप' ", "B) 'गांधीजींचे विचार' ", "C) 'गांधी: अ बायोग्राफी' ", "D) 'गांधी: अ मॅन' "), 2),
+            Question(19, "प्रश्न 19: 'संगणक व साहित्य' या लेखात कोणत्या गोष्टींचा समावेश केला आहे?", listOf("A) संगणकाची भूमिका", "B) साहित्य निर्मिती", "C) लेखनाचे तंत्र", "D) सर्व पर्याय बरोबर आहेत"), 3),
+            Question(20, "प्रश्न 20: 'शब्दावरील प्रेम' या निबंधात लेखकाने कोणत्या विषयावर चर्चा केली आहे?", listOf("A) भाषाशुद्धता", "B) भाषा आणि संस्कृती", "C) संवाद कौशल्य", "D) लेखनाचे महत्त्व"), 1),
 
-            // Chalu Ghadamodi (Current Affairs) Questions
+                    // Chalu Ghadamodi (Current Affairs) Questions
             Question(21, "प्रश्न २१: २०२४ च्या साली भारताचे नवीन राष्ट्रपती कोण असतील?", listOf("A) द्रौपदी मुर्मू", "B) नरेंद्र मोदी", "C) राहुल गांधी", "D) ममता बॅनर्जी"), 1),
             Question(22, "प्रश्न २२: भारतातील सौर ऊर्जा उत्पादकतेसाठी कोणता राज्य सर्वोच्च आहे?", listOf("A) गुजरात", "B) महाराष्ट्र", "C) मध्य प्रदेश", "D) कर्नाटका"), 0),
             Question(23, "प्रश्न २३: 'ताजमहल' च्या पुनरुत्थानासाठी कोणती योजना कार्यान्वित झाली?", listOf("A) स्मार्ट सिटी योजना", "B) वसतिगृह योजना", "C) सांस्कृतिक वारसा योजना", "D) पर्यटन योजना"), 2),
             Question(24, "प्रश्न २४: '2024 ऑलंपिक खेळ' कोणत्या शहरात होणार आहेत?", listOf("A) पॅरिस", "B) टोकियो", "C) बीजिंग", "D) लंडन"), 0),
             Question(25, "प्रश्न २५: २०२३ च्या 'ग्रॅमी पुरस्कार'मध्ये 'गाणं ऑफ द इयर' कोणत्या गाण्याला मिळाला?", listOf("A) 'Easy on Me'", "B) 'Stay'", "C) 'As It Was'", "D) 'About Damn Time'"), 1),
 
-            // English Questions
-            Question(26, "Question 26: Identify the correct sentence: ", listOf("A) Neither John nor his friends was here.", "B) Neither John nor his friends were here.", "C) Both John and his friends was here.", "D) Both John and his friends were here."), 1),
-            Question(27, "Question 27: What does the word 'ubiquitous' mean?", listOf("A) Rare", "B) Present everywhere", "C) Hard to find", "D) Uncommon"), 1),
-            Question(28, "Question 28: Choose the correct form: 'If I (be) you, I (accept) the offer.'", listOf("A) were, will accept", "B) am, accept", "C) were, would accept", "D) was, accept"), 2),
-            Question(29, "Question 29: Which of the following sentences is grammatically correct?", listOf("A) I likes tea.", "B) I like tea and coffee.", "C) I like neither tea or coffee.", "D) I doesn't like tea."), 1),
-            Question(30, "Question 30: Choose the appropriate preposition: 'She is good (___) mathematics.'", listOf("A) in", "B) at", "C) on", "D) for"), 1)
+            Question(26, "प्रश्न 26: 144 चे वर्गमूळ किती आहे?", listOf("A) 10", "B) 12", "C) 14", "D) 16"), 1),
+            Question(27, "प्रश्न 27: 56 मध्ये 7 ने भाग केल्यास उत्तर काय येईल?", listOf("A) 6", "B) 7", "C) 8", "D) 9"), 2),
+            Question(28, "प्रश्न 28: 5, 10, 15, 20 या श्रेणीतील पुढील संख्या कोणती?", listOf("A) 21", "B) 22", "C) 25", "D) 30"), 2),
+            Question(29, "प्रश्न 29: 1 ते 50 पर्यंत किती सम संख्यांचा समावेश होतो?", listOf("A) 25", "B) 26", "C) 24", "D) 23"), 1),
+            Question(30, "प्रश्न 30: एका वृत्ताचा परीघ शोधण्यासाठी योग्य सूत्र कोणते आहे?", listOf("A) π x त्रिज्या", "B) 2π x त्रिज्या", "C) π x व्यास", "D) 2π x व्यास"), 1)
+
         )
+    }
+
+    private fun showScoreDialog(score: Int) {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Quiz Finished!")
+        builder.setMessage("Your score is $score/${questionList.size}")
+
+        // Add a button to reset the quiz
+        builder.setPositiveButton("OK") { dialog, _ ->
+            dialog.dismiss()
+            resetQuiz() // Reset the quiz after dismissing the dialog
+        }
+
+        // Create and show the dialog
+        val dialog = builder.create()
+        dialog.show()
     }
 
 }

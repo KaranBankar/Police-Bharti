@@ -32,9 +32,10 @@
         android:orientation="horizontal">
 
         <com.google.android.material.card.MaterialCardView
-            android:layout_width="@dimen/_125sdp"
+            android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_50sdp"
             app:strokeWidth="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_70sdp"
             android:backgroundTint="@color/white"
             app:strokeColor="@color/primary"
             android:id="@+id/test1">
@@ -49,8 +50,9 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
-            android:layout_width="@dimen/_125sdp"
+            android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_70sdp"
             app:strokeWidth="@dimen/_1sdp"
             android:layout_marginLeft="@dimen/_15sdp"
             android:id="@+id/test2"
@@ -74,7 +76,7 @@
         android:orientation="horizontal">
 
         <com.google.android.material.card.MaterialCardView
-            android:layout_width="@dimen/_125sdp"
+            android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_50sdp"
             app:strokeWidth="@dimen/_1sdp"
             android:backgroundTint="@color/white"
@@ -91,7 +93,7 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
-            android:layout_width="@dimen/_125sdp"
+            android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_50sdp"
             app:strokeWidth="@dimen/_1sdp"
             android:layout_marginLeft="@dimen/_15sdp"
@@ -116,7 +118,7 @@
         android:orientation="horizontal">
 
         <com.google.android.material.card.MaterialCardView
-            android:layout_width="@dimen/_125sdp"
+            android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_50sdp"
             app:strokeWidth="@dimen/_1sdp"
             android:id="@+id/test5"
@@ -133,7 +135,7 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
-            android:layout_width="@dimen/_125sdp"
+            android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_50sdp"
             app:strokeWidth="@dimen/_1sdp"
             android:id="@+id/test6"

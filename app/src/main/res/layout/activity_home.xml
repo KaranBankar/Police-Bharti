@@ -63,30 +63,39 @@
 
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="@dimen/_80sdp"
+                        android:layout_width="wrap_content"
                         android:layout_height="@dimen/_35sdp"
                         android:layout_gravity="center"
                         android:id="@+id/selct_district_card"
-                        android:layout_marginLeft="@dimen/_35sdp"
+                        android:layout_marginLeft="@dimen/_65sdp"
                         app:cardCornerRadius="@dimen/_8sdp"
-                        android:backgroundTint="@color/blue">
+                        android:backgroundTint="#5CE835">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="जिल्हा निवडा"
-                            android:textColor="@color/white"
-                            android:layout_marginTop="@dimen/_8sdp"
-                            android:layout_marginLeft="@dimen/_11sdp"
-                            android:textSize="@dimen/_12sdp"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+
+                            <ImageView
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="38dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/whatsapp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Share"
+                                android:textColor="@color/white"
+                                android:layout_marginTop="@dimen/_8sdp"
+                               android:layout_marginRight="@dimen/_10sdp"
+                                android:textSize="@dimen/_12sdp"/>
+
+
+                        </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
-                    <ImageView
-                        android:layout_width="@dimen/_25sdp"
-                        android:layout_height="@dimen/_30sdp"
-                        android:src="@drawable/bell"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="@dimen/_12sdp"/>
                 </LinearLayout>
 
             </androidx.appcompat.widget.Toolbar>
@@ -107,7 +116,10 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_160sdp"
-                android:layout_margin="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
                 android:backgroundTint="@color/secondary"
                 app:cardCornerRadius="@dimen/_15sdp">
 
@@ -137,13 +149,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_120sdp"
+                android:layout_marginTop="@dimen/_10sdp"
                 android:orientation="horizontal">
 
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="@dimen/_130sdp"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
                     app:strokeWidth="@dimen/_1sdp"
                     android:backgroundTint="@color/white"
                     app:strokeColor="@color/primary">
@@ -200,7 +213,7 @@
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="@dimen/_130sdp"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
                     app:strokeWidth="@dimen/_1sdp"
                     android:backgroundTint="@color/white"
                     app:strokeColor="@color/primary">
@@ -261,7 +274,7 @@
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="@dimen/_130sdp"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
                     app:strokeWidth="@dimen/_1sdp"
                     android:backgroundTint="@color/white"
                     app:strokeColor="@color/primary">
@@ -314,7 +327,7 @@
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="@dimen/_130sdp"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
                     android:backgroundTint="@color/white"
                     app:strokeWidth="@dimen/_1sdp"
                     app:strokeColor="@color/primary">
@@ -384,6 +397,7 @@
                     android:layout_width="@dimen/_40sdp"
                     android:layout_height="@dimen/_40sdp"
                     android:layout_marginLeft="@dimen/_10sdp"
+                    android:id="@+id/instagram"
                     android:src="@drawable/instagram"
                     android:layout_gravity="center"/>
                 <ImageView
@@ -395,6 +409,7 @@
                 <ImageView
                     android:layout_width="@dimen/_40sdp"
                     android:layout_height="@dimen/_40sdp"
+                    android:id="@+id/whatsapp"
                     android:src="@drawable/whatsapp"
                     android:layout_marginLeft="@dimen/_30sdp"
                     android:layout_gravity="center"/>
@@ -402,6 +417,7 @@
                 <ImageView
                 android:layout_width="@dimen/_40sdp"
                 android:layout_height="@dimen/_40sdp"
+                    android:id="@+id/linkdin"
                 android:src="@drawable/linkdin"
                 android:layout_marginLeft="@dimen/_30sdp"
                 android:layout_gravity="center"/>

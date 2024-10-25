@@ -1,14 +1,18 @@
 package com.example.policebharti
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
+import android.provider.CalendarContract.Colors
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -20,6 +24,8 @@ class TestOneActivity : AppCompatActivity() {
     private lateinit var questionList: List<Question>
     private lateinit var back:ImageView
 
+    lateinit var colorlayout: LinearLayout
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -30,6 +36,7 @@ class TestOneActivity : AppCompatActivity() {
             insets
         }
 
+        colorlayout=findViewById(R.id.color_layout)
         back=findViewById(R.id.back)
         val tv = findViewById<TextView>(R.id.count)
         questionList = loadQuestions() // Load or fetch questions
@@ -73,12 +80,27 @@ class TestOneActivity : AppCompatActivity() {
                 tv.text = "${currentQuestionIndex + 1}"
             } else {
                 // End of quiz
-                Toast.makeText(this, "Quiz finished! Your score is $score/${questionList.size}", Toast.LENGTH_SHORT).show()
-                resetQuiz()
+                showScoreDialog(score)
             }
         } else {
             Toast.makeText(this, "Please select an option", Toast.LENGTH_SHORT).show()
         }
+    }
+
+    private fun showScoreDialog(score: Int) {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Quiz Finished!")
+        builder.setMessage("Your score is $score/${questionList.size}")
+
+        // Add a button to reset the quiz
+        builder.setPositiveButton("OK") { dialog, _ ->
+            dialog.dismiss()
+            resetQuiz() // Reset the quiz after dismissing the dialog
+        }
+
+        // Create and show the dialog
+        val dialog = builder.create()
+        dialog.show()
     }
 
     private fun handlePreviousQuestion(tv: TextView) {
@@ -131,21 +153,22 @@ class TestOneActivity : AppCompatActivity() {
             Question(13,"प्रश्न १३: १२x१२ किती आहे?", listOf("A) १४४","B) १२८","C) १५६","D) १३२"),0),
             Question(14,"प्रश्न १४: एका संख्येचे २०% म्हणजे ५० आहे. तर ती संख्या किती असेल?", listOf("A) २००","B) २५०","C) १००","D) १५०"),0),
             Question(15,"प्रश्न १५: एका वस्त्रावर ४०% सूट आहे, तर ५०० रुपयांच्या वस्त्रावर सवलतीनंतरची किंमत किती?", listOf("A) ३००","B) ४००","C) २००","D) ३५०"),0),
-            Question(16,"प्रश्न १६: एका समभुज त्रिकोणातील प्रत्येक कोनाचे माप किती आहे?", listOf("A) 90°","B) 60°","C) 120°","D) 45°"),1),
-            Question(17,"प्रश्न १७: एका त्रिकोणाच्या दोन बाजू अनुक्रमे 7 आणि 9 आहेत. जर तिसरी बाजू 12 असेल, तर त्रिकोणाचे क्षेत्रफळ शोधा. (हीरोनचे सूत्र वापरा)", listOf("A) 35","B) 42","C) 50","D) 60"),2),
-            Question(18,"प्रश्न १८: एकतर्फी झगडल्यास किती वेळ लागतो?", listOf("A) २ तास","B) १ तास","C) ५ तास","D) ०.५ तास"),1),
-            Question(19,"प्रश्न १९: बोटावरील संख्यांकाचे मान किती आहेत?", listOf("A) २","B) ०","C) १","D) ५"),1),
-            Question(20,"प्रश्न २०: 'तामिळ' भाषा कोणत्या परिवारात येते?", listOf("A) इंडो-युरोपीय","B) द्रविड","C) सिमीत","D) ऑस्ट्रो-नेशियन"),1),
+            Question(16, "प्रश्न 16: ‘श्री तुकाराम गाथा’ या ग्रंथाचे महत्त्व काय आहे?", listOf("A) भक्तिसाहित्य", "B) ऐतिहासिक काव्य", "C) तत्त्वज्ञान", "D) सर्व पर्याय बरोबर आहेत"), 3),
+            Question(17, "प्रश्न 17: 'अण्णाभाऊ साठे' यांचे योगदान कोणत्या साहित्य प्रकारात आहे?", listOf("A) कथा", "B) कादंबरी", "C) निबंध", "D) कवीता"), 1),
+            Question(18, "प्रश्न 18: 'मोरयाच्या फडात' या निबंधाचे लेखक कोण आहेत?", listOf("A) व. पु. काळे", "B) पु. ल. देशपांडे", "C) ग. दि. माडगूळकर", "D) ना. सि. फडके"), 2),
+            Question(19, "प्रश्न 19: ‘निसर्ग वाचन’ या ग्रंथात लेखकाने कोणत्या गोष्टींचा समावेश केला आहे?", listOf("A) निसर्गाची सुंदरता", "B) पर्यावरण संरक्षण", "C) वन्यजीव संरक्षण", "D) सर्व पर्याय बरोबर आहेत"), 3),
+            Question(20, "प्रश्न 20: 'कविता एक वेगळीच आकाशगंगा' या लेखात कोणत्या विषयावर चर्चा केली आहे?", listOf("A) कविता लेखन", "B) कवितेतील भावना", "C) कविता वाचणे", "D) कवितेची इतिहास"), 1),
             Question(21,"प्रश्न २१: २०२४ च्या जी-२० शिखर परिषद कोणत्या शहरात झाली?", listOf("A) नवी दिल्ली","B) मुंबई","C) बेंगळुरू","D) कोलकाता"),0),
             Question(22,"प्रश्न २२: २०२४ च्या ऑलिंपिक खेळ कोणत्या देशात होणार आहेत?", listOf("A) जपान","B) अमेरिका","C) फ्रान्स","D) ऑस्ट्रेलिया"),2),
             Question(23,"प्रश्न २३: २०२४ मध्ये भारतातील पंतप्रधान निवडणुकीत कोणत्या पक्षाने सर्वाधिक जागा जिंकल्या?", listOf("A) भारतीय जनता पक्ष (BJP)","B) काँग्रेस","C) आम आदमी पक्ष","D) समाजवादी पक्ष"),0),
             Question(24,"प्रश्न २४: २०२४ मध्ये नासाच्या कोणत्या मोहिमेत मंगळ ग्रहाच्या वातावरणाबद्दल अधिक माहिती गोळा केली गेली?", listOf("A) मंगळ अभियान","B) पर्सेव्हरन्स रोव्हर","C) न्यू होरायझन्स","D) क्युरियोसिटी"),1),
             Question(25,"प्रश्न २५: २०२४ च्या नोबेल शांती पुरस्कार कोणाला मिळाला?", listOf("A) डेनिस मुकवेगे","B) मारिया रेसा","C) ग्रीटा थनबर्ग","D) यापैकी नाही"),2),
-            Question(26,"Question 26: Choose the correct synonym for the word elated", listOf("A) Sad","B) Excited","C) Angry","D) Confused"),1),
-            Question(27,"Question 27: Select the correct form of the verb to complete the sentence: \"He ______ to the market yesterday.\"", listOf("A) go","B) gone","C) went","D) going"),2),
-            Question(28,"Question 28: Which of the following sentences is grammatically correct?", listOf("A) She don’t like pizza","B) She doesn’t likes pizza","C) She doesn’t like pizza","D) She didn’t liked pizza"),2),
-            Question(29,"Question 29: Choose the word that best completes the sentence: \"The book on the table is ______.\"", listOf("A) your","B) yours","C) you","D) you're"),1),
-            Question(30,"Question 30: Identify the part of speech of the underlined word: \"She quickly finished her homework.\"", listOf("A) Adverb","B) Verb","C) Noun","D) Adjective"),0)
+            Question(26, "प्रश्न 26: 100 चा 20% किती आहे?", listOf("A) 15", "B) 20", "C) 25", "D) 30"), 1),
+            Question(27, "प्रश्न 27: एका घनाचे एकूण किती कोपरे असतात?", listOf("A) 6", "B) 8", "C) 12", "D) 4"), 1),
+            Question(28, "प्रश्न 28: 64 चा घनमूळ किती आहे?", listOf("A) 4", "B) 5", "C) 6", "D) 8"), 3),
+            Question(29, "प्रश्न 29: जर एका संख्येचा वर्ग 81 असेल, तर ती संख्या कोणती?", listOf("A) 7", "B) 8", "C) 9", "D) 10"), 2),
+            Question(30, "प्रश्न 30: 7 च्या पाढ्यातील 7 x 6 चे उत्तर काय आहे?", listOf("A) 36", "B) 42", "C) 48", "D) 54"), 1)
+
         )
     }
 }

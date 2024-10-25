@@ -9,6 +9,7 @@ import android.widget.RadioGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -71,8 +72,7 @@ class TestFourActivity : AppCompatActivity() {
                 tv.text = "${currentQuestionIndex + 1}"
             } else {
                 // End of quiz
-                Toast.makeText(this, "Quiz finished! Your score is $score/${questionList.size}", Toast.LENGTH_SHORT).show()
-                resetQuiz()
+                showScoreDialog(score)
             }
         } else {
             Toast.makeText(this, "Please select an option", Toast.LENGTH_SHORT).show()
@@ -135,12 +135,11 @@ class TestFourActivity : AppCompatActivity() {
             Question(14, "प्रश्न १४: जर A आणि B दोन्ही खरे असतील, तर A OR B हे काय असेल?", listOf("A) खरे", "B) खोटे", "C) कदाचित खरे", "D) प्रतिकूल"), 0),
             Question(15, "प्रश्न १५: 'कित्येक' म्हणजे कोणते?", listOf("A) एकटं", "B) अधिकतम", "C) अनंत", "D) अज्ञात"), 1),
 
-            // Bhumati (Geography) Questions
-            Question(16, "प्रश्न १६: 'गंगापुत्र' कोणत्या नदीला संदर्भित करते?", listOf("A) यमुना", "B) गंगा", "C) नर्मदा", "D) ताप्ती"), 1),
-            Question(17, "प्रश्न १७: भूमंडळाच्या कोणत्या भागात अधिक वाऱ्यांचा जोर असतो?", listOf("A) उंच पर्वत", "B) उष्णकटिबंधीय क्षेत्र", "C) ध्रुवीय क्षेत्र", "D) समशीतोष्ण क्षेत्र"), 2),
-            Question(18, "प्रश्न १८: 'गिनीज वर्ल्ड रेकॉर्ड' मध्ये सर्वात उंच पर्वत कोणता आहे?", listOf("A) के2", "B) माऊंट एव्हरेस्ट", "C) कंचनजंगा", "D) ल्होत्से"), 1),
-            Question(19, "प्रश्न १९: भारतात 'नर्मदा नदी' कुठून वाहते?", listOf("A) पूर्व ते पश्चिम", "B) उत्तर ते दक्षिण", "C) पश्चिम ते पूर्व", "D) दक्षिण ते उत्तर"), 0),
-            Question(20, "प्रश्न २०: 'सागरी जलवायु'च्या प्रमुख लक्षणांमध्ये कोणते आहे?", listOf("A) थंड शीत", "B) कमी वारा", "C) संतुलित तापमान", "D) उच्च आर्द्रता"), 2),
+            Question(16, "प्रश्न 16: ‘संत ज्ञानेश्वरी’ या ग्रंथाचे महत्व काय आहे?", listOf("A) भक्ति साहित्य", "B) तत्त्वज्ञान", "C) आत्मज्ञान", "D) सर्व पर्याय बरोबर आहेत"), 3),
+            Question(17, "प्रश्न 17: ‘कृष्णकुमार’ या कथेचा लेखक कोण आहे?", listOf("A) व. पु. काळे", "B) शं. ना. नवरे", "C) फडके", "D) पु. ल. देशपांडे"), 0),
+            Question(18, "प्रश्न 18: ‘निसर्ग’ या कविता संग्रहाचे लेखक कोण आहेत?", listOf("A) ना. सि. फडके", "B) व. पु. काळे", "C) ग. दि. माडगूळकर", "D) कुसुमाग्रज"), 3),
+            Question(19, "प्रश्न 19: 'अक्लांत शुद्ध' या निबंधात लेखकाने कोणत्या विषयावर विचार केला आहे?", listOf("A) मनुष्य जीवन", "B) शिक्षण", "C) निसर्ग", "D) तंत्रज्ञान"), 1),
+            Question(20, "प्रश्न 20: ‘कविता’ या साहित्यातील प्रमुख अंग कोणती?", listOf("A) रूपक", "B) छंद", "C) विषय", "D) सर्व पर्याय बरोबर आहेत"), 3),
 
             // Chalu Ghadamodi (Current Affairs) Questions
             Question(21, "प्रश्न २१: २०२४ च्या संसदीय निवडणुकांमध्ये कोणता पक्ष प्रमुख आहे?", listOf("A) भारतीय जनता पक्ष", "B) राष्ट्रवादी काँग्रेस", "C) काँग्रेस", "D) आम आदमी पार्टी"), 0),
@@ -149,13 +148,28 @@ class TestFourActivity : AppCompatActivity() {
             Question(24, "प्रश्न २४: २०२४ मध्ये ओलंपिक खेळ कोणत्या शहरात होणार आहेत?", listOf("A) टोकियो", "B) पॅरिस", "C) लॉस एंजेलिस", "D) बीजिंग"), 1),
             Question(25, "प्रश्न २५: २०२२ च्या शांती संधीसाठी कोणता देश निवडला गेला?", listOf("A) जर्मनी", "B) भारत", "C) अमेरिका", "D) युनायटेड किंगडम"), 1),
 
-            // English Questions
-            Question(26, "Question 26: What is the term for a word that has the opposite meaning?", listOf("A) Synonym", "B) Antonym", "C) Homonym", "D) Paronym"), 1),
-            Question(27, "Question 27: Identify the grammatical error: 'Each of the students have completed their homework.'", listOf("A) Each", "B) Have", "C) Completed", "D) Their"), 1),
-            Question(28, "Question 28: What is the passive voice of the sentence: 'The chef cooked the meal.'?", listOf("A) The meal was cooked by the chef.", "B) The chef was cooking the meal.", "C) The meal has been cooked by the chef.", "D) The chef will cook the meal."), 0),
-            Question(29, "Question 29: Choose the correct word: 'The committee ______ divided on the issue.'", listOf("A) are", "B) is", "C) were", "D) have"), 1),
-            Question(30, "Question 30: Which of the following sentences is correct?", listOf("A) I wish I was taller.", "B) I wish I were taller.", "C) I wish I be taller.", "D) I wish I am taller."), 1)
+            Question(26, "प्रश्न 26: 75 चा 40% किती आहे?", listOf("A) 30", "B) 25", "C) 35", "D) 40"), 0),
+            Question(27, "प्रश्न 27: 9 आणि 12 यांचा ल.सा.वि. किती आहे?", listOf("A) 18", "B) 24", "C) 36", "D) 12"), 0),
+            Question(28, "प्रश्न 28: 5 ते 15 पर्यंत असणाऱ्या विषम संख्यांची बेरीज किती आहे?", listOf("A) 50", "B) 40", "C) 60", "D) 45"), 3),
+            Question(29, "प्रश्न 29: पाई (π) चा सुमारे काय मान आहे?", listOf("A) 3.12", "B) 3.14", "C) 3.16", "D) 3.18"), 1),
+            Question(30, "प्रश्न 30: 144 चे अर्धे किती आहे?", listOf("A) 66", "B) 68", "C) 70", "D) 72"), 3)
+
         )
     }
 
+    private fun showScoreDialog(score: Int) {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Quiz Finished!")
+        builder.setMessage("Your score is $score/${questionList.size}")
+
+        // Add a button to reset the quiz
+        builder.setPositiveButton("OK") { dialog, _ ->
+            dialog.dismiss()
+            resetQuiz() // Reset the quiz after dismissing the dialog
+        }
+
+        // Create and show the dialog
+        val dialog = builder.create()
+        dialog.show()
+    }
 }

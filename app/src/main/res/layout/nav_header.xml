@@ -15,7 +15,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Karan Bankar"
+        android:text="पोलीस भर्ती"
         android:layout_gravity="center"
         android:textSize="@dimen/_15sdp"
         android:layout_marginTop="@dimen/_10sdp"
@@ -25,7 +25,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="karanbankar54@gmail.com"
+        android:text="पोलीस बनण्यासाठी सज्ज"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/_10sdp"
         android:textColor="@color/black" />

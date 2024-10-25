@@ -9,6 +9,7 @@ import android.widget.RadioGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -73,8 +74,7 @@ class TestTwoActivity : AppCompatActivity() {
                 tv.text = "${currentQuestionIndex + 1}"
             } else {
                 // End of quiz
-                Toast.makeText(this, "Quiz finished! Your score is $score/${questionList.size}", Toast.LENGTH_SHORT).show()
-                resetQuiz()
+                showScoreDialog(score)
             }
         } else {
             Toast.makeText(this, "Please select an option", Toast.LENGTH_SHORT).show()
@@ -137,28 +137,41 @@ class TestTwoActivity : AppCompatActivity() {
             Question(14, "प्रश्न १४: 8, 16, 32, ... या अनुक्रमात पुढील संख्या कोणती असेल?", listOf("A) 48", "B) 64", "C) 80", "D) 100"), 1),
             Question(15, "प्रश्न १५: 15 चा वर्गमूळ कोणता आहे?", listOf("A) 225", "B) 15", "C) 30", "D) 20"), 0),
 
-            // Bhumati Questions
-            Question(16, "प्रश्न १६: जगातील सर्वात मोठा महासागर कोणता आहे?", listOf("A) अटलांटिक", "B) प्रशांत", "C) भारतीय", "D) आर्कटिक"), 1),
-            Question(17, "प्रश्न १७: भारतातील सर्वात उंच पर्वत कोणता आहे?", listOf("A) कंचनजंगा", "B) नंदादेवी", "C) एव्हरेस्ट", "D) धौलागिरी"), 2),
-            Question(18, "प्रश्न १८: 'मायनमार' देश कोणत्या खंडात आहे?", listOf("A) आफ्रिका", "B) आशिया", "C) युरोप", "D) ऑस्ट्रेलिया"), 1),
-            Question(19, "प्रश्न १९: 'माझी जमीन, माझा अधिकार' हा नारा कोणत्या चळवळीचा आहे?", listOf("A) स्वातंत्र्य चळवळ", "B) भूमी अधिकार चळवळ", "C) हरित क्रांती", "D) ओबीसी चळवळ"), 1),
-            Question(20, "प्रश्न २०: 'गंगा नदी' कुठून वाहते?", listOf("A) हिमालय", "B) डेक्कन", "C) खैरे", "D) वायव्य"), 0),
+            Question(16, "प्रश्न 16: 'माज्या गाण्यांत एक सुर आहे' या वचनाचे मुख्य आशय काय आहे?", listOf("A) आत्मा", "B) प्रेम", "C) धैर्य", "D) संघर्ष"), 1),
+            Question(17, "प्रश्न 17: 'रामकृष्ण परमहंस' यांच्या जीवनावर कोणता ग्रंथ प्रसिद्ध आहे?", listOf("A) 'रामकृष्ण-कथा'", "B) 'परमहंसाचे विचार'", "C) 'रामकृष्णांचे दर्शन'", "D) 'रामकृष्णजींचे कार्य'"), 2),
+            Question(18, "प्रश्न 18: 'कविता आणि त्याची रचना' या विषयावर कोणती प्रमुख तत्त्वे आहेत?", listOf("A) छंद, रिती, विषय", "B) विषय, आशय, प्रतिमान", "C) प्रतिमा, छंद, संदर्भ", "D) सर्व पर्याय बरोबर आहेत"), 3),
+            Question(19, "प्रश्न 19: 'वाचनाची महत्ता' या विषयावर कोणता निबंध प्रसिद्ध आहे?", listOf("A) 'वाचन आणि विचार'", "B) 'वाचनाचे लाभ'", "C) 'वाचनाची सवय'", "D) 'वाचनाची ताकद'"), 1),
+            Question(20, "प्रश्न 20: 'संत ज्ञानेश्वरी' या ग्रंथात कोणत्या तत्त्वज्ञानाचा समावेश आहे?", listOf("A) अद्वैत तत्त्वज्ञान", "B) द्वैत तत्त्वज्ञान", "C) सृजनशीलता", "D) नैतिकता"), 1),
 
-            // Chalu Ghadamodi Questions
+                    // Chalu Ghadamodi Questions
             Question(21, "प्रश्न २१: २०२३ च्या भारतातील लोकशाहीत कोणत्या पक्षाचा विजय झाला?", listOf("A) भाजप", "B) काँग्रेस", "C) आम आदमी पार्टी", "D) शिवसेना"), 0),
             Question(22, "प्रश्न २२: २०२३ मध्ये 'मिस युनिव्हर्स' चा किताब कोणाला मिळाला?", listOf("A) हरनाज संधू", "B) सुष्मिता सेन", "C) प्रिया अल्वारो", "D) यापैकी नाही"), 1),
             Question(23, "प्रश्न २३: २०२३ मध्ये कोणत्या देशात 'वर्ल्ड कप' स्पर्धा झाली?", listOf("A) भारत", "B) ऑस्ट्रेलिया", "C) इंग्लंड", "D) पाकिस्तान"), 0),
             Question(24, "प्रश्न २४: २०२३ मध्ये 'ऑस्कर' पुरस्कार कोणत्या चित्रपटाला मिळाला?", listOf("A) द फादर", "B) नो टाइम टू डाई", "C) द पावर ऑफ द डॉग", "D) यापैकी नाही"), 2),
             Question(25, "प्रश्न २५: २०२३ मध्ये भारतीय क्रिकेट संघाचे कर्णधार कोण होते?", listOf("A) विराट कोहली", "B) रोहित शर्मा", "C) एम.एस. धोनी", "D) यापैकी नाही"), 1),
 
-            // English Questions
-            Question(26, "Question 26: Which of the following sentences is correct?", listOf("A) He go to school", "B) He goes to school", "C) He gone to school", "D) He going to school"), 1),
-            Question(27, "Question 27: Identify the antonym of 'Difficult'", listOf("A) Hard", "B) Easy", "C) Tough", "D) Complicated"), 1),
-            Question(28, "Question 28: What is the superlative form of 'good'?", listOf("A) Goodest", "B) Better", "C) Best", "D) Well"), 2),
-            Question(29, "Question 29: Which word is a synonym for 'happy'?", listOf("A) Sad", "B) Joyful", "C) Angry", "D) Tired"), 1),
-            Question(30, "Question 30: Choose the correct tense: \"She ______ to the store yesterday.\"", listOf("A) go", "B) goes", "C) went", "D) gone"), 2)
+            Question(26, "प्रश्न 26: 13, 26, 39, 52 या श्रेणीतील पुढील संख्या कोणती आहे?", listOf("A) 65", "B) 60", "C) 66", "D) 64"), 0),
+            Question(27, "प्रश्न 27: 36 चे वर्गमूळ किती आहे?", listOf("A) 8", "B) 6", "C) 7", "D) 5"), 1),
+            Question(28, "प्रश्न 28: एका समचतुर्भुजाच्या क्षेत्रफळाचा फॉर्म्युला काय आहे?", listOf("A) बाजू x बाजू", "B) 1/2 (आधार x उंची)", "C) लांबी x रुंदी", "D) 1/2 x (अर्धव्यास)^2"), 2),
+            Question(29, "प्रश्न 29: 15 आणि 20 मधील महत्तम सामायिक गुणक कोणता आहे?", listOf("A) 4", "B) 3", "C) 5", "D) 6"), 2),
+            Question(30, "प्रश्न 30: 6 च्या पाचपट किती आहे?", listOf("A) 36", "B) 30", "C) 25", "D) 24"), 1)
+
         )
     }
+    private fun showScoreDialog(score: Int) {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Quiz Finished!")
+        builder.setMessage("Your score is $score/${questionList.size}")
 
+        // Add a button to reset the quiz
+        builder.setPositiveButton("OK") { dialog, _ ->
+            dialog.dismiss()
+            resetQuiz() // Reset the quiz after dismissing the dialog
+        }
+
+        // Create and show the dialog
+        val dialog = builder.create()
+        dialog.show()
+    }
 
 }
