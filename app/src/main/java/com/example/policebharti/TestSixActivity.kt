@@ -58,18 +58,18 @@ class TestSixActivity : AppCompatActivity() {
 
     private fun handleNextQuestion(tv: TextView) {
         val selectedOptionId = findViewById<RadioGroup>(R.id.rgOptions).checkedRadioButtonId
-
+        val radioGroup = findViewById<RadioGroup>(R.id.rgOptions)
         if (selectedOptionId != -1) {
             val isCorrect = selectedOptionId == questionList[currentQuestionIndex].correctAnswerIndex
             if (isCorrect) {
                 score++ // Increase the score for correct answer
-                Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
+               // Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "Incorrect!", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this, "Incorrect!", Toast.LENGTH_SHORT).show()
             }
 
             currentQuestionIndex++
-
+            radioGroup.clearCheck()
             if (currentQuestionIndex < questionList.size) {
                 displayQuestion(currentQuestionIndex)
                 tv.text = "${currentQuestionIndex + 1}"

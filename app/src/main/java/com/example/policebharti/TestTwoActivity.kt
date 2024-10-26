@@ -67,11 +67,11 @@ class TestTwoActivity : AppCompatActivity() {
             val isCorrect = selectedOptionId == questionList[currentQuestionIndex].correctAnswerIndex
             if (isCorrect) {
                 score++ // Increase the score for correct answer
-                Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
+               // Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
             } else {
                 val correctAnswerIndex = questionList[currentQuestionIndex].correctAnswerIndex
                 val correctAnswerText = (radioGroup.getChildAt(correctAnswerIndex) as? RadioButton)?.text.toString()
-                Toast.makeText(this, "Incorrect! Correct Answer: $correctAnswerText", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this, "Incorrect! Correct Answer: $correctAnswerText", Toast.LENGTH_SHORT).show()
             }
 
             currentQuestionIndex++

@@ -62,9 +62,9 @@ class TestThreeActivity : AppCompatActivity() {
             val isCorrect = selectedOptionId == questionList[currentQuestionIndex].correctAnswerIndex
             if (isCorrect) {
                 score++ // Increase the score for correct answer
-                Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "Incorrect!", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this, "Incorrect!", Toast.LENGTH_SHORT).show()
             }
 
             currentQuestionIndex++

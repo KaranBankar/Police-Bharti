@@ -66,12 +66,14 @@ class Chalu_Ghada_Modi_Activity : AppCompatActivity() {
 
             if (isCorrect) {
                 score++ // Increase the score for correct answer
-                Toast.makeText(this, "Correct! Answer: $correctAnswerText", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this, "Incorrect! Correct Answer: $correctAnswerText", Toast.LENGTH_SHORT).show()
             }
 
             currentQuestionIndex++
+            val radioGroup = findViewById<RadioGroup>(R.id.rgOptions)
+            radioGroup.clearCheck()
 
             if (currentQuestionIndex < questionList.size) {
                 displayQuestion(currentQuestionIndex)

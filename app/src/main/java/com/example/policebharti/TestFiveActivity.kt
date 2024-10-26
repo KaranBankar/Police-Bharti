@@ -61,12 +61,14 @@ class TestFiveActivity : AppCompatActivity() {
             val isCorrect = selectedOptionId == questionList[currentQuestionIndex].correctAnswerIndex
             if (isCorrect) {
                 score++ // Increase the score for correct answer
-                Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "Incorrect!", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this, "Incorrect!", Toast.LENGTH_SHORT).show()
             }
 
             currentQuestionIndex++
+            val radioGroup = findViewById<RadioGroup>(R.id.rgOptions)
+            radioGroup.clearCheck()
 
             if (currentQuestionIndex < questionList.size) {
                 displayQuestion(currentQuestionIndex)

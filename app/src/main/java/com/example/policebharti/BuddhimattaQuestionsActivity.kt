@@ -72,6 +72,8 @@ class BuddhimattaQuestionsActivity : AppCompatActivity() {
             }
 
             currentQuestionIndex++
+            val radioGroup = findViewById<RadioGroup>(R.id.rgOptions)
+            radioGroup.clearCheck()
 
             if (currentQuestionIndex < questionList.size) {
                 displayQuestion(currentQuestionIndex)
