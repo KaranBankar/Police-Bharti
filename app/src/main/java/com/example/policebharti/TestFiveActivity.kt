@@ -174,4 +174,11 @@ class TestFiveActivity : AppCompatActivity() {
         val dialog = builder.create()
         dialog.show()
     }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        var i=Intent(this,HomeActivity::class.java)
+        startActivity(i)
+        finish()
+    }
 }

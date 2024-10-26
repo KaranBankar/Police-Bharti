@@ -90,4 +90,11 @@ class Syllabus_PDF_Activity : AppCompatActivity() {
             Toast.makeText(this,"Syllabus Download",Toast.LENGTH_SHORT).show();
         }
     }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        var i=Intent(this,HomeActivity::class.java)
+        startActivity(i)
+        finish()
+    }
 }

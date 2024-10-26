@@ -1,7 +1,10 @@
 package com.example.policebharti
 
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Bundle
+import android.provider.CalendarContract.Colors
+import android.util.TypedValue
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.RadioButton
@@ -13,6 +16,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import android.graphics.Color as Color1
 
 class TestTwoActivity : AppCompatActivity() {
 
@@ -56,18 +60,22 @@ class TestTwoActivity : AppCompatActivity() {
     }
 
     private fun handleNextQuestion(tv: TextView) {
-        val selectedOptionId = findViewById<RadioGroup>(R.id.rgOptions).checkedRadioButtonId
+        val radioGroup = findViewById<RadioGroup>(R.id.rgOptions)
 
+        val selectedOptionId = radioGroup.checkedRadioButtonId
         if (selectedOptionId != -1) {
             val isCorrect = selectedOptionId == questionList[currentQuestionIndex].correctAnswerIndex
             if (isCorrect) {
                 score++ // Increase the score for correct answer
                 Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "Incorrect!", Toast.LENGTH_SHORT).show()
+                val correctAnswerIndex = questionList[currentQuestionIndex].correctAnswerIndex
+                val correctAnswerText = (radioGroup.getChildAt(correctAnswerIndex) as? RadioButton)?.text.toString()
+                Toast.makeText(this, "Incorrect! Correct Answer: $correctAnswerText", Toast.LENGTH_SHORT).show()
             }
 
             currentQuestionIndex++
+            radioGroup.clearCheck() // Clear the selected option for the next question
 
             if (currentQuestionIndex < questionList.size) {
                 displayQuestion(currentQuestionIndex)
@@ -80,6 +88,8 @@ class TestTwoActivity : AppCompatActivity() {
             Toast.makeText(this, "Please select an option", Toast.LENGTH_SHORT).show()
         }
     }
+
+
 
     private fun handlePreviousQuestion(tv: TextView) {
         if (currentQuestionIndex > 0) {

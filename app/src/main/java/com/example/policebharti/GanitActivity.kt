@@ -60,11 +60,15 @@ class GanitActivity : AppCompatActivity() {
 
         if (selectedOptionId != -1) {
             val isCorrect = selectedOptionId == questionList[currentQuestionIndex].correctAnswerIndex
+            val correctAnswerText = findViewById<RadioButton>(
+                questionList[currentQuestionIndex].correctAnswerIndex
+            ).text.toString()
+
             if (isCorrect) {
                 score++ // Increase the score for correct answer
-                Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Correct! Answer: $correctAnswerText", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "Incorrect!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Incorrect! Correct Answer: $correctAnswerText", Toast.LENGTH_SHORT).show()
             }
 
             currentQuestionIndex++
@@ -74,7 +78,7 @@ class GanitActivity : AppCompatActivity() {
                 tv.text = "${currentQuestionIndex + 1}"
             } else {
                 // End of quiz
-                Toast.makeText(this, "Quiz finished! Your score is $score/${questionList.size}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"Quiz Ended!",Toast.LENGTH_SHORT).show()
                 resetQuiz()
             }
         } else {

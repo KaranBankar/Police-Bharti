@@ -44,6 +44,7 @@
             android:layout_height="@dimen/_40sdp"
             android:layout_gravity="center"
             android:layout_marginLeft="-10dp"
+            android:backgroundTint="@color/white"
             app:cardCornerRadius="@dimen/_10sdp">
 
             <LinearLayout

@@ -59,5 +59,12 @@ class Question_Papre_PDF_Activity : AppCompatActivity() {
 
         }
     }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        var i=Intent(this,HomeActivity::class.java)
+        startActivity(i)
+        finish()
+    }
 }
 

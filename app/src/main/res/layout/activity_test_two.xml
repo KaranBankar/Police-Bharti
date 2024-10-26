@@ -43,6 +43,7 @@
             android:layout_width="@dimen/_100sdp"
             android:layout_height="@dimen/_40sdp"
             android:layout_gravity="center"
+            android:backgroundTint="@color/white"
             android:layout_marginLeft="-10dp"
             app:cardCornerRadius="@dimen/_10sdp">
 
@@ -105,6 +106,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_150sdp"
             android:background="@color/white"
+            android:backgroundTint="@color/white"
             android:layout_marginTop="@dimen/_20sdp"
             android:orientation="horizontal">
             <RadioGroup

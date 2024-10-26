@@ -55,6 +55,7 @@ class TestThreeActivity : AppCompatActivity() {
     }
 
     private fun handleNextQuestion(tv: TextView) {
+        val radioGroup = findViewById<RadioGroup>(R.id.rgOptions)
         val selectedOptionId = findViewById<RadioGroup>(R.id.rgOptions).checkedRadioButtonId
 
         if (selectedOptionId != -1) {
@@ -67,7 +68,7 @@ class TestThreeActivity : AppCompatActivity() {
             }
 
             currentQuestionIndex++
-
+            radioGroup.clearCheck()
             if (currentQuestionIndex < questionList.size) {
                 displayQuestion(currentQuestionIndex)
                 tv.text = "${currentQuestionIndex + 1}"
@@ -79,6 +80,8 @@ class TestThreeActivity : AppCompatActivity() {
             Toast.makeText(this, "Please select an option", Toast.LENGTH_SHORT).show()
         }
     }
+
+
 
     private fun handlePreviousQuestion(tv: TextView) {
         if (currentQuestionIndex > 0) {
@@ -172,5 +175,12 @@ class TestThreeActivity : AppCompatActivity() {
         // Create and show the dialog
         val dialog = builder.create()
         dialog.show()
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        var i=Intent(this,HomeActivity::class.java)
+        startActivity(i)
+        finish()
     }
 }

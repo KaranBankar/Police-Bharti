@@ -47,24 +47,6 @@ class HomeActivity : AppCompatActivity() {
         toggle.syncState()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        binding.navView.setNavigationItemSelectedListener {
-
-            if (it.itemId == R.id.nav_home) {
-                var intent = Intent(this, HomeActivity::class.java)
-                startActivity(intent)
-                finish()
-            } else if (it.itemId == R.id.nav_settings) {
-                Toast.makeText(this, "Settings clicked", Toast.LENGTH_SHORT).show()
-            } else if (it.itemId == R.id.nav_aboutus) {
-//                var dialog=Dialog(this)
-//                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-//                dialog.setTitle("About US")
-//                dialog.setContentView()
-//                dialog.create()
-            }
-            true
-        }
-
         binding.SubjectWiseQuestion.setOnClickListener {
             var intent = Intent(this, SubjectWiseQuestionActivity::class.java)
             startActivity(intent)
