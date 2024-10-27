@@ -92,7 +92,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Question will appear here"
-                android:textSize="18sp"
+                android:textSize="@dimen/_14sdp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:layout_gravity="center"
@@ -141,7 +141,7 @@
                 android:layout_marginTop="@dimen/_60sdp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/primary"
-                android:layout_marginLeft="@dimen/_80sdp"
+                android:layout_marginLeft="@dimen/_100sdp"
                 android:text="Next"
                 android:layout_marginRight="@dimen/_10sdp"/>
 

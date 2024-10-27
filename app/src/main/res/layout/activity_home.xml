@@ -156,7 +156,7 @@
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="@dimen/_130sdp"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_16sdp"
                     app:strokeWidth="@dimen/_1sdp"
                     android:backgroundTint="@color/white"
                     app:strokeColor="@color/primary">
@@ -202,12 +202,6 @@
                             android:textStyle="bold" />
                     </com.google.android.material.card.MaterialCardView>
                 </com.google.android.material.card.MaterialCardView>
-
-
-
-
-
-
 
 
                 <com.google.android.material.card.MaterialCardView
@@ -274,7 +268,7 @@
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="@dimen/_130sdp"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_17sdp"
                     app:strokeWidth="@dimen/_1sdp"
                     android:backgroundTint="@color/white"
                     app:strokeColor="@color/primary">
@@ -390,7 +384,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_50sdp"
-                android:layout_margin="@dimen/_15sdp"
+                android:layout_margin="@dimen/_18sdp"
                 android:orientation="horizontal">
 
                 <ImageView
