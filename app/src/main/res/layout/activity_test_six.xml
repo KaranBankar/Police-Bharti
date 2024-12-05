@@ -93,6 +93,7 @@
                 android:layout_height="wrap_content"
                 android:text="Question will appear here"
                 android:textSize="@dimen/_14sdp"
+                android:textIsSelectable="true"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:layout_gravity="center"
