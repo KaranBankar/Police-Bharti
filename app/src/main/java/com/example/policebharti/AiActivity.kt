@@ -1,11 +1,20 @@
 package com.example.policebharti
 
+import android.content.Context
 import android.content.Intent
+import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
+import android.util.AttributeSet
+import android.view.View
+import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
+import android.webkit.WebChromeClient
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.widget.FrameLayout
+import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -50,7 +59,6 @@ class AiActivity : AppCompatActivity() {
 
         binding.webView.loadUrl("https://www.meta.ai/")
 
-
         binding.back.setOnClickListener {
             var i = Intent(this, HomeActivity::class.java)
             startActivity(i)
@@ -66,3 +74,6 @@ class AiActivity : AppCompatActivity() {
         finish()
     }
 }
+
+
+
