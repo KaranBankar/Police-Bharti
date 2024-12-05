@@ -42,6 +42,12 @@ class HomeActivity : AppCompatActivity() {
             R.string.open,
             R.string.close
         )
+
+        binding.aiCard.setOnClickListener{
+            var i=Intent(this,AiActivity::class.java)
+            startActivity(i)
+
+        }
         binding.drawerLayout.addDrawerListener(toggle)
 
         toggle.syncState()
@@ -89,6 +95,7 @@ class HomeActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return true
     }
+
 
     private fun openWhatsApp() {
         // Check if WhatsApp is installed

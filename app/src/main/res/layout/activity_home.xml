@@ -29,6 +29,8 @@
 
 
 
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -66,10 +68,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="@dimen/_35sdp"
                         android:layout_gravity="center"
-                        android:id="@+id/selct_district_card"
+                        android:id="@+id/ai_card"
                         android:layout_marginLeft="@dimen/_65sdp"
                         app:cardCornerRadius="@dimen/_8sdp"
-                        android:backgroundTint="#5CE835">
+                        android:backgroundTint="#2196F3">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -77,16 +79,16 @@
                             android:orientation="horizontal">
 
 
-                            <ImageView
+                            <de.hdodenhof.circleimageview.CircleImageView
                                 android:layout_width="@dimen/_40sdp"
                                 android:layout_height="38dp"
                                 android:layout_gravity="center"
-                                android:src="@drawable/whatsapp" />
+                                android:src="@drawable/aiiii" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Share"
+                                android:text="Ask Ai"
                                 android:textColor="@color/white"
                                 android:layout_marginTop="@dimen/_8sdp"
                                android:layout_marginRight="@dimen/_10sdp"
@@ -130,7 +132,7 @@
 
                     <ImageView
                         android:layout_width="wrap_content"
-                        android:layout_height="150dp"
+                        android:layout_height="@dimen/_120sdp"
                         android:src="@drawable/mhpolicelogo" />
 
                     <TextView
