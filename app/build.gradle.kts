@@ -44,6 +44,9 @@ dependencies {
     //SDP dependecy for device compatable UI
     implementation("com.intuit.sdp:sdp-android:1.1.1")
 
+    implementation ("com.intuit.sdp:sdp-android:1.0.6")
+
+
     //Circular Image Dependecy
     implementation("de.hdodenhof:circleimageview:3.1.0")
 

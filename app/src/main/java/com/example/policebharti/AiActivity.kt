@@ -88,14 +88,37 @@ class AiActivity : AppCompatActivity() {
         val webView = findViewById<WebView>(R.id.webView)
 
         if (isKeyboardOpen) {
+            // Get screen height and width
+            val metrics = resources.displayMetrics
+            val screenHeight = metrics.heightPixels
+            val screenWidth = metrics.widthPixels
 
-            webView.layoutParams.height = 900 // Set desired height in pixels
+            val newHeight = when {
+                screenHeight <= 1280 && screenWidth <= 720 -> { // Small screens (e.g., 4" devices)
+                    600 // Adjust height for small screens
+                }
+                screenHeight <= 1920 && screenWidth <= 1080 -> { // Normal screens (e.g., 5"-6" devices)
+                    800 // Adjust height for normal screens
+                }
+                screenHeight <= 2560 && screenWidth <= 1440 -> { // Large screens (e.g., 6"-7" devices)
+                    1200 // Adjust height for large screens
+                }
+                else -> { // Extra-large screens (e.g., tablets or foldables)
+                    1400 // Adjust height for extra-large screens
+                }
+            }
+
+            webView.layoutParams.height = newHeight
         } else {
-            // Restore WebView to its original size
+            // Restore to MATCH_PARENT
             webView.layoutParams.height = ViewGroup.LayoutParams.MATCH_PARENT
         }
         webView.requestLayout() // Apply the changes
     }
+
+
+
+
 
 
     override fun onBackPressed() {
