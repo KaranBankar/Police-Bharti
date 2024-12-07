@@ -3,6 +3,7 @@ package com.example.policebharti
 import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
+import android.graphics.Rect
 import android.net.Uri
 import android.os.Bundle
 import android.util.AttributeSet
@@ -36,6 +37,7 @@ class AiActivity : AppCompatActivity() {
             insets
         }
 
+        setupKeyboardListener()
         binding.webView.settings.javaScriptEnabled = true
         binding.webView.webViewClient = object : WebViewClient() {
             override fun shouldOverrideUrlLoading(view: WebView, request: WebResourceRequest): Boolean {
@@ -66,6 +68,35 @@ class AiActivity : AppCompatActivity() {
 
         }
     }
+
+
+    fun setupKeyboardListener() {
+        val rootView = findViewById<View>(android.R.id.content)
+        rootView.viewTreeObserver.addOnGlobalLayoutListener {
+            val rect = Rect()
+            rootView.getWindowVisibleDisplayFrame(rect)
+            val screenHeight = rootView.rootView.height
+            val keypadHeight = screenHeight - rect.bottom
+
+            // Check if the keyboard is open
+            val isKeyboardOpen = keypadHeight > screenHeight * 0.15
+            handleKeyboardVisibility(isKeyboardOpen)
+        }
+    }
+
+    private fun handleKeyboardVisibility(isKeyboardOpen: Boolean) {
+        val webView = findViewById<WebView>(R.id.webView)
+
+        if (isKeyboardOpen) {
+
+            webView.layoutParams.height = 900 // Set desired height in pixels
+        } else {
+            // Restore WebView to its original size
+            webView.layoutParams.height = ViewGroup.LayoutParams.MATCH_PARENT
+        }
+        webView.requestLayout() // Apply the changes
+    }
+
 
     override fun onBackPressed() {
         super.onBackPressed()

@@ -68,7 +68,7 @@ class Chalu_Ghada_Modi_Activity : AppCompatActivity() {
                 score++ // Increase the score for correct answer
                 Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "Incorrect! Correct Answer: $correctAnswerText", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Incorrect!", Toast.LENGTH_SHORT).show()
             }
 
             currentQuestionIndex++

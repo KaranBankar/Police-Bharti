@@ -161,18 +161,20 @@ class TestSixActivity : AppCompatActivity() {
     }
 
     private fun showScoreDialog(score: Int) {
+        val dialogView = layoutInflater.inflate(R.layout.custom_score_dialog, null)
+        val tvScore = dialogView.findViewById<TextView>(R.id.tvScore)
+        val btnOk = dialogView.findViewById<Button>(R.id.btnOk)
+        tvScore.text = "Your Score is $score/${questionList.size}"
         val builder = AlertDialog.Builder(this)
-        builder.setTitle("Quiz Finished!")
-        builder.setMessage("Your score is $score/${questionList.size}")
-
-        // Add a button to reset the quiz
-        builder.setPositiveButton("OK") { dialog, _ ->
-            dialog.dismiss()
-            resetQuiz() // Reset the quiz after dismissing the dialog
-        }
-
-        // Create and show the dialog
+        builder.setView(dialogView)
         val dialog = builder.create()
+        dialog.setCancelable(false)
+
+        btnOk.setOnClickListener {
+            dialog.dismiss()
+            resetQuiz()
+        }
+        dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
         dialog.show()
     }
 

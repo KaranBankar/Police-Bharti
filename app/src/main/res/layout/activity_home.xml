@@ -71,7 +71,7 @@
                         android:id="@+id/ai_card"
                         android:layout_marginLeft="@dimen/_65sdp"
                         app:cardCornerRadius="@dimen/_8sdp"
-                        android:backgroundTint="#2196F3">
+                        android:backgroundTint="@color/white">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -83,13 +83,14 @@
                                 android:layout_width="@dimen/_40sdp"
                                 android:layout_height="38dp"
                                 android:layout_gravity="center"
-                                android:src="@drawable/aiiii" />
+                                android:src="@drawable/meta" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Ask Ai"
-                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:textColor="#2196F3"
                                 android:layout_marginTop="@dimen/_8sdp"
                                android:layout_marginRight="@dimen/_10sdp"
                                 android:textSize="@dimen/_12sdp"/>
@@ -120,6 +121,7 @@
                 android:layout_height="@dimen/_160sdp"
                 android:layout_marginRight="@dimen/_15sdp"
                 android:layout_marginLeft="@dimen/_15sdp"
+                app:cardElevation="@dimen/_8sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:layout_marginBottom="@dimen/_20sdp"
                 android:backgroundTint="@color/secondary"
@@ -209,7 +211,7 @@
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="@dimen/_130sdp"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
                     app:strokeWidth="@dimen/_1sdp"
                     android:backgroundTint="@color/white"
                     app:strokeColor="@color/primary">
@@ -323,7 +325,7 @@
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="@dimen/_130sdp"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
                     android:backgroundTint="@color/white"
                     app:strokeWidth="@dimen/_1sdp"
                     app:strokeColor="@color/primary">

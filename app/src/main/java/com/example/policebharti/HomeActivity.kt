@@ -56,6 +56,7 @@ class HomeActivity : AppCompatActivity() {
         binding.SubjectWiseQuestion.setOnClickListener {
             var intent = Intent(this, SubjectWiseQuestionActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
 
