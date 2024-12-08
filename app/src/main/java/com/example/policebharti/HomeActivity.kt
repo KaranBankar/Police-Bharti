@@ -5,6 +5,8 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
+import android.view.Menu
 import android.view.MenuItem
 import android.view.Window
 import android.widget.Toast
@@ -13,11 +15,13 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.view.GravityCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.ViewCompat.ScrollIndicators
 import androidx.core.view.WindowInsetsCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.example.policebharti.databinding.ActivityHomeBinding
+import com.google.android.material.navigation.NavigationView
 
 class HomeActivity : AppCompatActivity() {
 
@@ -35,6 +39,9 @@ class HomeActivity : AppCompatActivity() {
             insets
         }
 
+        setSupportActionBar(binding.toolbar)
+
+        // Setup ActionBarDrawerToggle
         toggle = ActionBarDrawerToggle(
             this,
             binding.drawerLayout,
@@ -42,9 +49,52 @@ class HomeActivity : AppCompatActivity() {
             R.string.open,
             R.string.close
         )
+        binding.drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        binding.aiCard.setOnClickListener{
-            var i=Intent(this,AiActivity::class.java)
+        binding.portfolio.setOnClickListener {
+            val portfolioUrl =
+                "https://karanbankar.netlify.app/" // Your actual Instagram profile link
+
+            // If the app is not installed, open the URL in a browser
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(portfolioUrl))
+            startActivity(browserIntent)
+        }
+
+
+        binding.privacyPolicy.setOnClickListener{
+
+            val PolicyUrl =
+                "https://policebhartiapp.netlify.app/" // Your actual Instagram profile link
+
+                // If the app is not installed, open the URL in a browser
+                val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(PolicyUrl))
+                startActivity(browserIntent)
+
+        }
+
+        // Handle NavigationView item clicks
+        binding.navView.setNavigationItemSelectedListener { menuItem ->
+            Log.d("DrawerClick", "Item clicked: ${menuItem.title}")
+            when (menuItem.itemId) {
+                R.id.nav_home -> {
+                    Toast.makeText(this, "Home clicked", Toast.LENGTH_SHORT).show()
+                }
+                R.id.privacy -> {
+                    Toast.makeText(this, "Privacy clicked", Toast.LENGTH_SHORT).show()
+                }
+                R.id.nav_settings -> {
+                    Toast.makeText(this, "Settings clicked", Toast.LENGTH_SHORT).show()
+                }
+            }
+            binding.drawerLayout.closeDrawer(GravityCompat.START)
+            true
+        }
+
+
+        binding.aiCard.setOnClickListener {
+            var i = Intent(this, AiActivity::class.java)
             startActivity(i)
 
         }
