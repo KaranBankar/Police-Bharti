@@ -1,6 +1,7 @@
 package com.example.policebharti
 
 import android.content.Intent
+import android.content.res.ColorStateList
 import android.content.res.Configuration
 import android.graphics.Color
 import android.os.Bundle
@@ -143,18 +144,15 @@ class TestOneActivity : AppCompatActivity() {
         val radioGroup = findViewById<RadioGroup>(R.id.rgOptions)
         radioGroup.removeAllViews()
 
-       // val tintList = ContextCompat.getColorStateList(this, R.drawable.radio_button_tint)
-
+        val primaryColor = ContextCompat.getColor(this, R.color.black)
         question.options.forEachIndexed { i, option ->
             val radioButton = AppCompatRadioButton(this)
             radioButton.text = option
             radioButton.id = i
             radioButton.setTextColor(Color.BLACK)
-           // radioButton.buttonTintList = tintList
+            radioButton.buttonTintList = ColorStateList.valueOf(primaryColor)
             radioGroup.addView(radioButton)
         }
-
-
     }
 
     private fun resetQuiz() {

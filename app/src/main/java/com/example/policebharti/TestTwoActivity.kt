@@ -1,7 +1,9 @@
 package com.example.policebharti
 
 import android.content.Intent
+import android.content.res.ColorStateList
 import android.content.res.Configuration
+import android.graphics.Color
 import android.os.Bundle
 import android.provider.CalendarContract.Colors
 import android.util.TypedValue
@@ -14,6 +16,8 @@ import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatRadioButton
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.graphics.Color as Color1
@@ -108,11 +112,13 @@ class TestTwoActivity : AppCompatActivity() {
         val radioGroup = findViewById<RadioGroup>(R.id.rgOptions)
         radioGroup.removeAllViews()
 
-        // Dynamically add options as radio buttons
+        val primaryColor = ContextCompat.getColor(this, R.color.black)
         question.options.forEachIndexed { i, option ->
-            val radioButton = RadioButton(this)
+            val radioButton = AppCompatRadioButton(this)
             radioButton.text = option
             radioButton.id = i
+            radioButton.setTextColor(Color.BLACK)
+            radioButton.buttonTintList = ColorStateList.valueOf(primaryColor)
             radioGroup.addView(radioButton)
         }
     }
