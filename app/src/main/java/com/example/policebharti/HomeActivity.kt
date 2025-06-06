@@ -67,7 +67,7 @@ class HomeActivity : AppCompatActivity() {
         binding.privacyPolicy.setOnClickListener{
 
             val PolicyUrl =
-                "https://policebhartiapp.netlify.app/" // Your actual Instagram profile link
+                "https://policebhartiapp.netlify.app/"
 
                 // If the app is not installed, open the URL in a browser
                 val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(PolicyUrl))

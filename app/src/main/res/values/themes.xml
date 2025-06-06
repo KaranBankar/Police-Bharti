@@ -3,12 +3,16 @@
     <style name="Base.Theme.PoliceBharti" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/primary</item>
     </style>
 
     <style name="CustomCardView" parent="Widget.MaterialComponents.CardView">
         <item name="strokeColor">@color/primary</item>
+        <item name="colorPrimary">@color/primary</item>
         <item name="strokeWidth">2dp</item>
     </style>
 
-    <style name="Theme.PoliceBharti" parent="Base.Theme.PoliceBharti" />
+    <style name="Theme.PoliceBharti" parent="Base.Theme.PoliceBharti" >
+        <item name="colorPrimary">@color/primary</item>
+    </style>
 </resources>

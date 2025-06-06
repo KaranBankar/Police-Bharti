@@ -1,6 +1,7 @@
 package com.example.policebharti
 
 import android.content.Intent
+import android.content.res.Configuration
 import android.graphics.Color
 import android.os.Bundle
 import android.provider.CalendarContract.Colors
@@ -14,7 +15,10 @@ import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatRadioButton
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 
 class TestOneActivity : AppCompatActivity() {
@@ -35,6 +39,22 @@ class TestOneActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+//        window.statusBarColor = ContextCompat.getColor(this, R.color.primary)
+//        WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightStatusBars = false // if green is dark
+//        val isDarkMode = (resources.configuration.uiMode and
+//                Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES
+//
+//        if (isDarkMode) {
+//            // Dark mode active
+//            yourView.setBackgroundColor(Color.WHITE)   // set background white
+//            yourTextView.setTextColor(Color.BLACK)     // text color black
+//        } else {
+//            // Light mode active
+//            yourView.setBackgroundColor(Color.BLACK)   // set background black
+//            yourTextView.setTextColor(Color.WHITE)     // text color white
+//        }
+
 
         colorlayout=findViewById(R.id.color_layout)
         back=findViewById(R.id.back)
@@ -123,13 +143,18 @@ class TestOneActivity : AppCompatActivity() {
         val radioGroup = findViewById<RadioGroup>(R.id.rgOptions)
         radioGroup.removeAllViews()
 
-        // Dynamically add options as radio buttons
+       // val tintList = ContextCompat.getColorStateList(this, R.drawable.radio_button_tint)
+
         question.options.forEachIndexed { i, option ->
-            val radioButton = RadioButton(this)
+            val radioButton = AppCompatRadioButton(this)
             radioButton.text = option
             radioButton.id = i
+            radioButton.setTextColor(Color.BLACK)
+           // radioButton.buttonTintList = tintList
             radioGroup.addView(radioButton)
         }
+
+
     }
 
     private fun resetQuiz() {
