@@ -17,21 +17,6 @@
         tools:openDrawer="start"
         android:orientation="vertical">
 
-        <com.google.android.material.navigation.NavigationView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/nav_view"
-            app:menu="@menu/nav_menu"
-            app:headerLayout="@layout/nav_header"
-            app:itemIconTint="@null"
-            android:layout_gravity="start"
-            android:fitsSystemWindows="true"/>
-
-
-
-
-
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -443,6 +428,16 @@
     </ScrollView>
 
         </LinearLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/nav_view"
+            app:menu="@menu/nav_menu"
+            app:headerLayout="@layout/nav_header"
+            app:itemIconTint="@null"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"/>
     </androidx.drawerlayout.widget.DrawerLayout>
 
 </LinearLayout>

@@ -28,6 +28,8 @@ class HomeActivity : AppCompatActivity() {
     lateinit var binding: ActivityHomeBinding
 
     lateinit var toggle: ActionBarDrawerToggle
+    private lateinit var navView: NavigationView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -41,7 +43,7 @@ class HomeActivity : AppCompatActivity() {
         }
 
         setSupportActionBar(binding.toolbar)
-
+        navView = findViewById(R.id.nav_view)
         // Setup ActionBarDrawerToggle
         toggle = ActionBarDrawerToggle(
             this,
@@ -52,7 +54,24 @@ class HomeActivity : AppCompatActivity() {
         )
         binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        //supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        navView.setNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.nav_home -> {
+                    Toast.makeText(this,"Home", Toast.LENGTH_LONG).show()
+                }
+
+                R.id.nav_home->{
+
+                }
+                R.id.nav_settings -> {
+
+                }
+            }
+           // drawerLayout.closeDrawers()
+            true
+        }
 
         binding.portfolio.setOnClickListener {
             val portfolioUrl =
