@@ -22,6 +22,7 @@ import androidx.core.view.ViewCompat.ScrollIndicators
 import androidx.core.view.WindowInsetsCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.example.policebharti.databinding.ActivityHomeBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.shape.CornerFamily
 import com.google.android.material.shape.MaterialShapeDrawable
@@ -60,22 +61,22 @@ class HomeActivity : AppCompatActivity() {
         toggle.syncState()
         //supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        navView.setNavigationItemSelectedListener { menuItem ->
-            when (menuItem.itemId) {
-                R.id.nav_home -> {
-                    Toast.makeText(this,"Home", Toast.LENGTH_LONG).show()
-                }
-
-                R.id.nav_home->{
-
-                }
-                R.id.nav_settings -> {
-
-                }
-            }
-           // drawerLayout.closeDrawers()
-            true
-        }
+//        navView.setNavigationItemSelectedListener { menuItem ->
+//            when (menuItem.itemId) {
+//                R.id.nav_home -> {
+//                    Toast.makeText(this,"Home", Toast.LENGTH_LONG).show()
+//                }
+//
+//                R.id.nav_home->{
+//
+//                }
+//                R.id.nav_settings -> {
+//
+//                }
+//            }
+//           // drawerLayout.closeDrawers()
+//            true
+//        }
 
         binding.portfolio.setOnClickListener {
             val portfolioUrl =
@@ -114,12 +115,18 @@ class HomeActivity : AppCompatActivity() {
                 R.id.nav_home -> {
                     Toast.makeText(this, "Home clicked", Toast.LENGTH_SHORT).show()
                 }
-                R.id.nav_rate -> {
-                    Toast.makeText(this, "Privacy clicked", Toast.LENGTH_SHORT).show()
+                R.id.nav_about  ->{
+                    var i= Intent(this, AboutActivity::class.java)
+                    startActivity(i)
+                    finish()
                 }
-                R.id.nav_settings -> {
-                    Toast.makeText(this, "Settings clicked", Toast.LENGTH_SHORT).show()
+                R.id.nav_disclaimer->{
+                        showDisclaimerDialog()
+                    }
+                R.id.nav_rate->{
+
                 }
+
             }
             binding.drawerLayout.closeDrawer(GravityCompat.START)
             true
@@ -180,7 +187,18 @@ class HomeActivity : AppCompatActivity() {
         return true
     }
 
-
+    private fun showDisclaimerDialog() {
+        MaterialAlertDialogBuilder(this)
+            .setTitle("Disclaimer")
+            .setMessage(R.string.disclaimer_content)
+            .setPositiveButton("OK") { dialog, _ ->
+                dialog.dismiss()
+            }
+            .setBackgroundInsetStart(16)
+            .setBackgroundInsetEnd(16)
+            .create()
+            .show()
+    }
     private fun openWhatsApp() {
         // Check if WhatsApp is installed
         val packageManager = packageManager

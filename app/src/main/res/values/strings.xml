@@ -2,4 +2,14 @@
     <string name="app_name">Police Bharti</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+
+    <string name="disclaimer_content">
+        The Police Bharti app, developed by Karan Bankar and Chaitanya Kakde, is designed solely for practice purposes to assist individuals preparing for police recruitment examinations in Maharashtra. The app provides study materials, practice questions, and resources for educational use only.\n\n
+        We do not collect, store, or process any personal data from users of this app. Your privacy is respected, and no user information is gathered or shared.\n\n
+        The content provided, including but not limited to text, images, and practice questions, is for informational and practice purposes only. We do not guarantee or promise that the questions or materials in this app will appear in any actual police recruitment examinations. Users are solely responsible for verifying the accuracy and relevance of the content with official government sources, police recruitment boards, or other authoritative entities before relying on it.\n\n
+        While we strive to provide accurate and helpful resources, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, or suitability of the information in the app. The developers and affiliates of the Police Bharti app shall not be liable for any direct, indirect, incidental, special, or consequential damages or losses arising from the use of, or inability to use, the app or its content.\n\n
+        The app may include links to external websites or resources for convenience. We do not endorse, control, or assume responsibility for the content, privacy policies, or practices of any third-party websites or services.\n\n
+        By using the Police Bharti app, you acknowledge that it is not affiliated with any official police recruitment authority or government body and is intended only for practice and preparation. For official information, always consult the relevant recruitment board or authority.
+    </string>
+
 </resources>
