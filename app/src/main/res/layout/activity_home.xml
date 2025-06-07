@@ -429,15 +429,31 @@
 
         </LinearLayout>
 
-        <com.google.android.material.navigation.NavigationView
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/nav_view"
-            app:menu="@menu/nav_menu"
-            app:headerLayout="@layout/nav_header"
-            app:itemIconTint="@null"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="10dp"
             android:layout_gravity="start"
-            android:fitsSystemWindows="true"/>
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:strokeColor="@android:color/transparent"
+            app:strokeWidth="0dp">
+
+            <com.google.android.material.navigation.NavigationView
+                android:id="@+id/nav_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:fitsSystemWindows="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                app:menu="@menu/nav_menu"
+                app:headerLayout="@layout/nav_header"
+                app:itemIconTint="@null" />
+        </com.google.android.material.card.MaterialCardView>
+
     </androidx.drawerlayout.widget.DrawerLayout>
 
 </LinearLayout>

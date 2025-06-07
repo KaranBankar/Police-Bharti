@@ -3,6 +3,7 @@ package com.example.policebharti
 import android.app.Dialog
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.content.res.ColorStateList
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -22,6 +23,9 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.example.policebharti.databinding.ActivityHomeBinding
 import com.google.android.material.navigation.NavigationView
+import com.google.android.material.shape.CornerFamily
+import com.google.android.material.shape.MaterialShapeDrawable
+import com.google.android.material.shape.ShapeAppearanceModel
 
 class HomeActivity : AppCompatActivity() {
 
@@ -94,6 +98,15 @@ class HomeActivity : AppCompatActivity() {
 
         }
 
+        val shapeAppearanceModel = ShapeAppearanceModel.Builder()
+            .setTopLeftCorner(CornerFamily.ROUNDED, 40f)
+            .setBottomLeftCorner(CornerFamily.ROUNDED, 40f)
+            .build()
+
+        val backgroundDrawable = MaterialShapeDrawable(shapeAppearanceModel)
+        backgroundDrawable.fillColor = ColorStateList.valueOf(ContextCompat.getColor(this, R.color.white))
+        navView.background = backgroundDrawable
+
         // Handle NavigationView item clicks
         binding.navView.setNavigationItemSelectedListener { menuItem ->
             Log.d("DrawerClick", "Item clicked: ${menuItem.title}")
@@ -101,7 +114,7 @@ class HomeActivity : AppCompatActivity() {
                 R.id.nav_home -> {
                     Toast.makeText(this, "Home clicked", Toast.LENGTH_SHORT).show()
                 }
-                R.id.privacy -> {
+                R.id.nav_rate -> {
                     Toast.makeText(this, "Privacy clicked", Toast.LENGTH_SHORT).show()
                 }
                 R.id.nav_settings -> {
